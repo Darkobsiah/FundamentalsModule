@@ -7,4 +7,7 @@ my_list.insert(3, 4)
 # We extend our list with these integers
 my_list.extend([5, 6, 7])
 
+# Another way to extend a list:
+my_list += [8, 9, 10]
+
 print(my_list)
