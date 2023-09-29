@@ -1,5 +1,4 @@
-string = 'Hello'
+my_list = [1, 2, 3, 4, 5, 6,]
 
-new_string = list(string)
-new_string.reverse()
-print(new_string)
+if 7 in my_list:
+    print(5)
