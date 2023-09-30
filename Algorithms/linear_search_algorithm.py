@@ -1,17 +1,17 @@
 # Def Linear Searching Function
 def linear_searching(your_list, element):
-    for i in range(len(your_list)):
+    for i in range(len(my_list)):
         if your_list[i] == element:
-            result = i
-            return result
+            result = element
+            return i
     return -1
 
 # Read Input
-mylist = [int(x) for x in input().split(',')]
-target = 7
+my_list = [int(x) for x in input().split(',')]
+target = -5
 
 # Call the function
-result = linear_searching(mylist, target)
+result = linear_searching(my_list, target)
 
 # Print function return
 print(result)
