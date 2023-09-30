@@ -12,14 +12,17 @@ if command == 'even':
     for num in number_list:
         if num % 2 == 0:
             special_list.append(num)
+
 elif command == 'odd':
     for num in number_list:
         if num % 2 != 0:
             special_list.append(num)
+
 elif command == 'negative':
     for num in number_list:
         if num < 0:
             special_list.append(num)
+
 elif command == 'positive':
     for num in number_list:
         if num >= 0:
