@@ -1,9 +1,7 @@
 # Read User input
 number_of_courses = int(input())
-my_list = []
+mylist = []
 # Logic
 for course in range(number_of_courses):
-    my_list.append(input())
-
-print(my_list)
-# Print User output
+    mylist.append(input())
+print(mylist)
