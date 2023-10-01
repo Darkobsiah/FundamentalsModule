@@ -11,4 +11,3 @@ if 2 in my_list:
     print(my_list.index(2))
 # In case we are not sure if the value
 # really in the list or not
-# :)
