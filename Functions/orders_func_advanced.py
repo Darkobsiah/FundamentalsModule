@@ -1,5 +1,15 @@
 # Define a function
 def orders(product: str, quantity: int):
+    """
+
+     This function calculates the
+     total price of an order and returns it
+
+    :params product, quantity:str, int
+
+    :return: float(total_price)
+    """
+
     return {
         'coffee': quantity * 1.5,
         'water': quantity * 1,
