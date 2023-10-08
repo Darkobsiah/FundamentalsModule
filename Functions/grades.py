@@ -1,4 +1,4 @@
-# Defining a function
+# Define a function
 def grades(grade: float):
     """
         This function takes a grade argument,

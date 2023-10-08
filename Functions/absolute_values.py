@@ -1,4 +1,4 @@
-# Declare a function
+# Define a function
 def absolute_values(a: list):
     """"
     Function return the absolute float values
