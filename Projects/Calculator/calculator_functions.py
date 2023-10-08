@@ -45,7 +45,7 @@ def main(operator: str, a: int, b: int):
 
 print('Python Calculator')
 
-print('Menu')
+print('Menu:')
 print()
 print('1.Addition')
 print('2.Subtraction')
@@ -53,24 +53,36 @@ print('3.Multiplication')
 print('4.Division')
 print('5.Quit')
 
-choice = input('Enter your choice (1/2/3/4/5) ')
-while choice != 5:
-    choice = int(choice)
-    if choice < 1 and choice > 5:
-        print('Error: Invalid choice input.')
-    if choice == 1:
-        choice = 'Addition'.lower()
-    elif choice == 2:
-        choice = 'Subtraction'.lower()
-    elif choice == 3:
-        choice = 'Multiplication'.lower()
-    elif choice == 4:
-        choice = 'Division'.lower()
-    elif choice == 5:
-        print('Goodbye!')
+quiting = False
+while True:
+    if quiting:
         break
-    print()
-    a = int(input('Enter the first number: '))
-    b = int(input('Enter the second number: '))
-    print(main(choice, a, b))
     choice = input('Enter your choice (1/2/3/4/5) ')
+    choice = int(choice)
+    if 1 <= choice <= 5:
+        while True:
+            choice = int(choice)
+            if choice == 1:
+                choice = 'Addition'.lower()
+            elif choice == 2:
+                choice = 'Subtraction'.lower()
+            elif choice == 3:
+                choice = 'Multiplication'.lower()
+            elif choice == 4:
+                choice = 'Division'.lower()
+            elif choice == 5:
+                quiting = True
+                break
+            print()
+            a = int(input('Enter the first number: '))
+            b = int(input('Enter the second number: '))
+            if choice != "division" and b != 0:
+                print(main(choice, a, b))
+            else:
+                print('Error: Division by zero')
+
+            choice = input('Enter your choice (1/2/3/4/5) ')
+    else:
+        print('Error: Incorrect operation chosen')
+
+print('Goodbye!')
