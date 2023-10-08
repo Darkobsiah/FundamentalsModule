@@ -15,4 +15,6 @@ def absolute_values(a: list):
 
 # Read User input
 float_list = input().split()
+
+# Call the function and print its result
 print(absolute_values(float_list))
