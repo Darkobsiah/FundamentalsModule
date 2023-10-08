@@ -24,6 +24,8 @@ def calculations(operator: str, a: int, b: int):
 operator = input()
 first_parameter = int(input())
 second_parameter = int(input())
+
+# Call the function and print its result
 print(calculations(operator, first_parameter, second_parameter))
 
 
