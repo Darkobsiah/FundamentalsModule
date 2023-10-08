@@ -21,7 +21,10 @@ def grades(grade: float):
         return 'Excellent'
 # Read User input
 grade = float(input())
+
+# Call the function and print its result
 print(grades(grade))
+
 
 
 
