@@ -12,8 +12,11 @@ def calculations(operator: str, a: int, b: int):
         "add": a + b,
         "subtract": a - b,
     }.get(operator)
+
 # Read User input
 operator = input()
 a = int(input())
 b = int(input())
+
+# Call the function and print its result
 print(calculations(operator, a, b))
