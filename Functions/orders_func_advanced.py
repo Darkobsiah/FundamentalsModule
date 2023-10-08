@@ -17,8 +17,10 @@ def orders(product: str, quantity: int):
         'snacks': quantity * 2
     }.get(product)
 
+# Read User input
 item = input()
 quantity = int(input())
+
+# Call the function and print its result
 result = orders(item, quantity)
 print(f"{result:.2f}")
-# Read User input
