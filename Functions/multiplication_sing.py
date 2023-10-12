@@ -1,17 +1,14 @@
 # Read User input
-numbers_list = [int(input()), int(input()), int(input())]
-negative_count = 0
+number_list = [int(input()), int(input()), int(input())]
+number_of_negatives = 0
 
+for num in number_list:
+    if num < 0:
+        number_of_negatives += 1
 
-for number in numbers_list:
-    if number < 0:
-        negative_count += 1
-
-if 0 in numbers_list:
-    result = "zero"
-elif negative_count == 0 or negative_count == 2:
-    result = "positive"
+if 0 in number_list:
+    print('zero')
+elif number_of_negatives == 1 or number_of_negatives == 3:
+    print('negative')
 else:
-    result = "negative"
-
-print(result)
+    print('positive')
