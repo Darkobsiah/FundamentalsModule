@@ -1,12 +1,14 @@
 # Define the function
-def data_types(type: str, object: str):
-    if type == 'int':
-        return int(object) * 2
-    elif type == 'real':
-        result = int(object) *  1.5
+def data_types(type_of_object: str, object_value: str):
+    if type_of_object == 'int':
+        result = int(object_value) * 2
+        return result
+    elif type_of_object == 'real':
+        result = int(object_value) * 1.5
         return f'{result:.2f}'
-    elif type == 'string':
-        return f'${object}$'
+    elif type_of_object == 'string':
+        result = f'${object_value}$'
+    return result
 
 
 # Read User input
