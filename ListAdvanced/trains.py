@@ -2,6 +2,7 @@ wagons = [0] * int(input())
 
 while True:
     command = input().split()
+
     if command[0] == 'End':
         print(wagons)
         break
