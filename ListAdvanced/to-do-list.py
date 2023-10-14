@@ -12,7 +12,6 @@ def to_do_list():
     sorted_notes = sorted(todo_list, key=lambda x: int(x.split("-")[0]))
     return [note.split("-")[1] for note in sorted_notes]
 
-
 result = to_do_list()
 print(result)
 
