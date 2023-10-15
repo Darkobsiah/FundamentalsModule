@@ -1,4 +1,4 @@
-fruits = ["apple", "banana", "banana"]
+fruits = ["apple", "orange", "banana", "banana"]
 
 counter = fruits.count("banana")
 
