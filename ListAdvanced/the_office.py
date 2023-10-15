@@ -1,14 +1,20 @@
 def check_employee_happiness():
     happiness_list = list(map(int, input().split()))
-    happiness_factor = int(input())
+    factor = int(input())
+    # Find the improved happiness
+    improved_happiness = [happiness * factor for happiness in happiness_list]
 
-    improved_happiness = [happiness * happiness_factor for happiness in happiness_list]
+    # Find the average happiness
     average_happiness = sum(improved_happiness) / len(improved_happiness)
-    happy_count = sum(happiness >= average_happiness for happiness in improved_happiness)
+
+    # Find the count of happy people
+    happy_people_count = sum(happier >= average_happiness for happier in improved_happiness)
+
+    # Total count = number of people
     total_count = len(improved_happiness)
 
-    message = 'are happy' if happy_count >= total_count / 2 else 'are not happy'
-    return f'Score: {happy_count}/{total_count}. Employees {message}!'
-
+    # Message ... if ... else
+    message = 'are happy' if happy_people_count >= total_count / 2 else 'are not happy'
+    return f'Score: {happy_people_count}/{total_count}. Employees {message}!'
 print(check_employee_happiness())
 
