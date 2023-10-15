@@ -15,6 +15,11 @@ def check_employee_happiness():
 
     # Message ... if ... else
     message = 'are happy' if happy_people_count >= total_count / 2 else 'are not happy'
+
+    # Return the output
     return f'Score: {happy_people_count}/{total_count}. Employees {message}!'
+
+
+# Call the function and print its return
 print(check_employee_happiness())
 
