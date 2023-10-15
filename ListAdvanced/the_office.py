@@ -7,11 +7,8 @@ def check_employee_happiness():
     happy_count = sum(happiness >= average_happiness for happiness in improved_happiness)
     total_count = len(improved_happiness)
 
-    if happy_count >= total_count / 2:
-        message = 'are happy'
-    else:
-        message = 'are not happy'
-    return f'Score: {happy_count}/6. Employees {message}!'
+    message = 'are happy' if happy_count >= total_count / 2 else 'are not happy'
+    return f'Score: {happy_count}/{total_count}. Employees {message}!'
 
 print(check_employee_happiness())
 
