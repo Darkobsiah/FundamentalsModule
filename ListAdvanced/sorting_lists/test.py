@@ -1,4 +1,3 @@
-print(list(filter(lambda x: x % 2 == 0, range(23, 98))))
+my_list = [1, 2, 3, 4, 5, 6, 7, 8]
 
-print([x for x in range(23, 98) if x % 2 == 0])
-
+print(my_list.index(3))
