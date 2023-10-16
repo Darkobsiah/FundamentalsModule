@@ -1,5 +1,6 @@
 import requests
 
+# Define a USD-EUR exchange function
 def get_price_usd_eur(operation):
     url = 'https://www.freeforexapi.com/api/live?pairs=USDEUR'
     try:
@@ -16,7 +17,7 @@ def get_price_usd_eur(operation):
     except requests.exceptions.RequestException as e:
         print('Error', e)
 
-
+# Define a EUR-USD exchange function
 def get_price_eur_usd(operation):
     url = 'https://www.freeforexapi.com/api/live?pairs=EURUSD'
     try:
@@ -33,7 +34,7 @@ def get_price_eur_usd(operation):
     except requests.exceptions.RequestException as e:
         print('Error', e)
 
-
+# Define a function with user menu
 def user_menu():
     print()
     print(6 * "* " + 'Welcome to our exchange board' + 6 * " *")
