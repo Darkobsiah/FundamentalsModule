@@ -23,13 +23,13 @@ numbers_list = input().split(", ")
 
 # Call the functions and take the returns
 positives = positive_numbers(numbers_list)
-negatives = positive_numbers(numbers_list)
+negatives = negative_numbers(numbers_list)
 evens = even_numbers(numbers_list)
-odds = even_numbers(numbers_list)
+odds = odd_numbers(numbers_list)
 
 # Print the list elements as int numbers
             # split by ", "
-print(", ".join(positives))
-print(", ".join(negatives))
-print(", ".join(evens))
-print(", ".join(odds))
+print("Positive: " + ", ".join(positives))
+print("Negative: " + ", ".join(negatives))
+print("Even: " + ", ".join(evens))
+print("Odd: " + ", ".join(odds))
