@@ -39,10 +39,12 @@ def user_menu():
     print()
     print(6 * "* " + 'Welcome to our exchange board' + 6 * " *")
     while True:
-        print()
-        operation_type = input("Please input 1 if you want to exchange USD into EUR\n"
-                               "           and 2 for the opposite ")
-        print()
+        print('To..')
+        print(' 1. Exchange from USD to EUR')
+        print(' 2. Exchange from EUR to USD')
+        operation_type = input("Please input a number: ")
+
+
         if int(operation_type) == 1:
             current_rate = get_price_usd_eur(operation_type)
         elif int(operation_type) == 2:
