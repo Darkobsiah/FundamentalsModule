@@ -6,11 +6,11 @@ def office_chairs(room_number: int)-> str:
         if difference < 0:
             print(f'{abs(difference)} more chairs needed in room {room}')
         chairs_left += difference
-    if chairs_left > 0:
-        print(f"Game On, {chairs_left} free chairs left")
-    return True
+    return chairs_left
 
 
 # Read User input
 number_of_rooms = int(input())
-result = office_chairs(number_of_rooms)
+total_free_chairs = office_chairs(number_of_rooms)
+if total_free_chairs >= 0:
+    print(f"Game On, {total_free_chairs} free chairs left")
