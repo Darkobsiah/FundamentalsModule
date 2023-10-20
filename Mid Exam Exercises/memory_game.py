@@ -45,11 +45,11 @@ def handle_valid_input(index1, index2, sequence, count_moves):
     else:
         print("Try again!")
 
-
     if len(sequence) == 0:
         print(f"You have won in {count_moves} turns!")
         exit()
 
 
 main()
+
 
