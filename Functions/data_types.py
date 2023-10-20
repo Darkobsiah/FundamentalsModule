@@ -8,6 +8,8 @@ def data_types(type_of_object: str, object_value: str):
         return f'{result:.2f}'
     elif type_of_object == 'string':
         result = f'${object_value}$'
+    else:
+        print("Invalid data")
     return result
 
 
