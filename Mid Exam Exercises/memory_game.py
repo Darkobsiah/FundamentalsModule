@@ -7,7 +7,7 @@ def main():
         command = input()
 
         if command == 'end':
-            print(f"Sorry you lose :(\n{''.join(sequence_of_elements)}")
+            print(f"Sorry you lose :(\n{' '.join(sequence_of_elements)}")
             break
         index1, index2 = map(int, command.split())
 
@@ -18,6 +18,8 @@ def main():
 
 
 def is_invalid_input(index1, index2, sequence):
+    # If one of the following checks is true the function returns True
+    # From then we step into (handle_invalid_input) function an so on
     return(
         index1 == index2
         or index1 < 0
@@ -36,7 +38,7 @@ def handle_invalid_input(sequence, count_moves):
 
 def handle_valid_input(index1, index2, sequence, count_moves):
     if sequence[index1] == sequence[index2]:
-        print(f"Congrats! You have found mathing elements - ${sequence[index1]}")
+        print(f"Congrats! You have found matching elements - {sequence[index1]}!")
         second_el = sequence[index2]
         sequence.pop(index1)
         sequence.remove(second_el)
