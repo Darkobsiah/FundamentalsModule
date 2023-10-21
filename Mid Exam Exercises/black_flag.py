@@ -4,6 +4,7 @@ daily_plunder = int(input())
 expected_plunder = float(input())
 
 total_plunder = 0
+# Initialize a for loop
 for day in range(1, days_of_plunder + 1):
     total_plunder += daily_plunder
 
@@ -13,6 +14,7 @@ for day in range(1, days_of_plunder + 1):
     elif day % 5 == 0:
         total_plunder *= 0.7
 
+# Print User output
 if total_plunder >= expected_plunder:
     print(f'Ahoy! {total_plunder:.2f} plunder gained.')
 else:
