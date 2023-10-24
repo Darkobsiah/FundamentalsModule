@@ -1,6 +1,6 @@
 number_of_coffees = 1
 
-# List
+# List initializing
 coffee_list = [1, 2, 3, 4, 5]
 another_list = coffee_list.copy()
 coffee_list.reverse()
