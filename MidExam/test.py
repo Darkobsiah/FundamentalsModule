@@ -13,3 +13,4 @@ for drink in coffee_list:
         break
 another_list.reverse()
 print(another_list)
+# print the output
