@@ -33,7 +33,7 @@ if winner == human_choice:
     print('         Well done!')
     print(f'Your {human_choice} beats AI\'s {ai_choose}')
     print()
-    print('You now have the ability to decide over Artifical Intelligence future')
+    print('You now have the ability to decide over Artificial Intelligence future')
 else:
     print('HA HA HA ' * 7)
     print('Sorry, you human-being, now you\'re under my control ;)')
