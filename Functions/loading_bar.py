@@ -7,7 +7,9 @@ def loading_bar(some_number: int)-> str:
     return f"100% Complete!\n" \
            f"[{'%' * 10}]"
 
+
 # Read User inputs
 single_number = int(input())
-print(loading_bar(single_number))
+
 # Print the function's result
+print(loading_bar(single_number))
