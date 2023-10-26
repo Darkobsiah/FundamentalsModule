@@ -34,6 +34,14 @@ details = ["near the river", "in the part", "at anonymous house", "at school", "
            "near the hospital", "down the bridge", "at the strip bar", "under the table", "up to the ceiling"
            "in the DeathZone", "in CS 1.6", "in GTA 5", "in the mountain"]
 
+# Initializing a list for greetings.
+greetings = ["bye, bye!", "see you soon!", "can't wait to chat again!", "have a nice day!", "greetings, SD!",
+             "much health!", "now buy me a coffee!", "hehehe", "huh", "bruh", "son"]
+
+# Initializing a list to various of saying thanks.
+thanks = ["Thank you for", "You're welcome back when you", "Wishing you all the best", "I love you, also",
+          "Why you left, i was just starting to", "Ah you, bad boy"]
+
 
 def random_word(words: list) -> str:
     """
@@ -48,7 +56,7 @@ def start_the_program():
     Define a function to start the program,
     here we also call the Main one.
     """
-    print("\nHello, the fun now begins!")
+    print("\nHello, let fun begins!")
     print(3)
     time.sleep(1)
     print(2)
@@ -78,6 +86,7 @@ def main():
 
         if answer.lower() == 'end':
             close_the_program()
+            break
 
 
 def close_the_program():
@@ -87,7 +96,9 @@ def close_the_program():
     """
     random_noun = random_word(nouns)
     random_verb = random_word(verbs)
-    print(f"Thank you for {random_verb} my new {random_noun}, haha.")
+    random_greet = random_word(greetings)
+    random_thanks = random_word(thanks)
+    print(f"{random_thanks} {random_verb} my new {random_noun}, {random_greet}")
 
 
 start_the_program()
