@@ -10,6 +10,7 @@ def palindrome_integers(list_example: list):
             output_list.append('False')
     return output_list
 
+
 # Read User input
 list_for_checking = input().split(', ')
 results = palindrome_integers(list_for_checking)
