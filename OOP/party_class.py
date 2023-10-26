@@ -7,7 +7,6 @@ class Party:
 # Create an instance of the class
 party = Party()
 
-
 name = input()
 # Initializing a while loop
 while name != "End":
