@@ -17,6 +17,7 @@ def orders(product: str, quantity: int):
         'snacks': quantity * 2
     }.get(product)
 
+
 # Read User input
 item = input()
 quantity = int(input())
