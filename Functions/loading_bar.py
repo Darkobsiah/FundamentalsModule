@@ -1,5 +1,5 @@
 # Define a function
-def loading_bar(some_number: int)-> str:
+def loading_bar(some_number: int) -> str:
     if some_number != 100:
         percentages = some_number // 10
         return f"{some_number}% [{'%' * percentages}{'.' * (10 - percentages)}]\n" \
