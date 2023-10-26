@@ -14,5 +14,5 @@ while name != "End":
     name = input()
 
 # Print the output
-print(f"Going: {', '.join(party.people)})")
+print(f"Going: {', '.join(party.people)}")
 print(f"Total: {len(party.people)}")
