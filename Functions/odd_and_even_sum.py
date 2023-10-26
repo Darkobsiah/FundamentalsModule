@@ -15,6 +15,7 @@ def odd_and_even_sum(number: int):
             sum_of_odd += int(num)
     return sum_of_odd, sum_of_even
 
+
 # Read User input
 special_number = int(input())
 sum_of_odd_digits, sum_of_even_digits = odd_and_even_sum(special_number)
