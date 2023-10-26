@@ -19,6 +19,8 @@ def grades(grade: float):
         return 'Very Good'
     elif 5.5 <= grade <= 6:
         return 'Excellent'
+
+
 # Read User input
 grade = float(input())
 
