@@ -9,6 +9,7 @@ x_4 = float(input())
 y_4 = float(input())
 
 
+# Define a function
 def hypotenuse(x, y):
     result = math.sqrt(math.pow(x, 2) + math.pow(y, 2))
     return result
