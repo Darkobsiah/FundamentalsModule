@@ -46,12 +46,12 @@ while True:
     random_adverb = random_word(adverbs)
     random_detail = random_word(details)
     print(f"{random_name} from {random_place} {random_adverb} {random_verb} {random_noun}.")
-    input("Click [Enter] to generate a new one.")
-    counter += 1
-    if counter % 3 == 0:
-        answer = input("Write 'End' if you want the program to stop: ")
-        if answer.lower() == "end":
-            break
+    answer = input("Click [Enter] to generate a new one. WRITE [End] to end.")
+    if answer.lower() == 'end':
+        print()
+        break
+
 
 print("Thank you for using my new FunGenerator, haha")
+
 
