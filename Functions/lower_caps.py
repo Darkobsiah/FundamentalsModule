@@ -1,4 +1,5 @@
-def lower_cap(name):
+# Define a function
+def lower_cap(name: str) -> str:
     name = name.lower()
     return name
 
