@@ -7,7 +7,6 @@ def smallest_of_three(list_int: list):
     return min(list_int)
 
 
-
 # Read User input
 first_n = int(input())
 second_n = int(input())

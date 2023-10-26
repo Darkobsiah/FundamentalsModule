@@ -13,6 +13,7 @@ def rounding(numbers: list):
         list_out.append(number)
     return list_out
 
+
 # Read User input
 list_with_numbers = input().split()
 

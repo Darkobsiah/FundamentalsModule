@@ -9,6 +9,7 @@ def perfect_number(positive_integer: int):
     else:
         return 'It\'s not so perfect.'
 
+
 # Read User input
 number = int(input())
 sum_list = 0

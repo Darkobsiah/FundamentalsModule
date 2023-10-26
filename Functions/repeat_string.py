@@ -12,6 +12,7 @@ def repeat_string(word: int, count: int):
     result = word * count
     return result
 
+
 # Read User input
 string = input()
 counter = int(input())
