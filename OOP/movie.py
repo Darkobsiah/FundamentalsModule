@@ -5,7 +5,6 @@ class Movie:
         self.name = name
         self.director = director
         self.watched = False
-        self.watched_movies = []
 
     # Changes the name of the movie
     def change_name(self, new_game: str):
@@ -17,14 +16,12 @@ class Movie:
 
     # Set the bool to True and increase the counter
     def watch(self):
-        if self.name is not self.watched_movies:
-            if self.watched is not True:
-                self.watched = True
-                Movie.__watched_movies += 1
+        if not self.watched:
+            self.watched = True
+            Movie.__watched_movies += 1
 
     def __repr__(self):
-        return f"Movie name: {self.name}; Movie director:" \
-               f" {self.director}.Total watched movies: {Movie.__watched_movies}"
+        return f"Movie name: {self.name}; Movie director: {self.director}.Total watched movies: {Movie.__watched_movies}"
 
 
 first_movie = Movie("Inception", "Christopher Nolan")
