@@ -14,6 +14,7 @@ def binary_search(nums, target):
         else:
             right = middle_index - 1
 
+
 nums = [int(x) for x in input().split(', ')]
 target = int(input())
 print(binary_search(nums, target))
