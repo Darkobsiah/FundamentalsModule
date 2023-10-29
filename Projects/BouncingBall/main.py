@@ -66,7 +66,7 @@ class Paddle:
         self.started = False
         self.canvas.bind_all('<KeyPress-Left>', self.turn_left)
         self.canvas.bind_all('<KeyPress-Right>', self.turn_right)
-        self.canvas.bind_all('<Button-3>', self.start_game)
+        self.canvas.bind_all('<space>', self.start_game)
 
     def draw(self):
         self.canvas.move(self.id, self.x, 0)
@@ -96,27 +96,27 @@ class Score:
 
 
 tk = Tk()
-tk.title('GAME')
+tk.title('The BOuNCiNG Ball')
 tk.resizable(0, 0)
 tk.wm_attributes("-topmost", 1)
 canvas = Canvas(tk, width=500, height=400, bd=0, highlightthickness=0)
 canvas.pack()
 tk.update()
 
-score = Score(canvas, 'green')
-paddle = Paddle(canvas, 'blue')
+score = Score(canvas, 'purple')
+paddle = Paddle(canvas, 'gold')
 ball = Ball(canvas, paddle, 'red')
-game_over_text = canvas.create_text(250, 200, text='GAME OVER',
-                                    state='hidden', font=('Times', 15))
-points = canvas.create_text(430, 370, text='Made by SLD', font=(('Helvetica', 15)))
+game_over_text = canvas.create_text(250, 200, text='FUN OVER',
+                                    state='hidden', font=('Times', 20))
+points = canvas.create_text(430, 370, text='made by SL', font=(('Agbalumo', 15)))
 
 while 1:
     if ball.hit_bottom == False and paddle.started == True:
         ball.draw()
         paddle.draw()
     if ball.hit_bottom == True:
-        time.sleep(1)
         canvas.itemconfig(game_over_text, state='normal')
+        time.sleep(3)
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
