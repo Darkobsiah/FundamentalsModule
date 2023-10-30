@@ -116,7 +116,7 @@ while 1:
         paddle.draw()
     if ball.hit_bottom == True:
         canvas.itemconfig(game_over_text, state='normal')
-        time.sleep(3)
+        time.sleep(0.08)
     tk.update_idletasks()
     tk.update()
     time.sleep(0.01)
