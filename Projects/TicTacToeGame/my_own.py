@@ -106,7 +106,7 @@ def new_game():
 
 window = Tk()
 window.title("Tic-Tac-Toe")
-players = ["S", "D"]
+players = ["X", "O"]
 player = random.choice(players)
 buttons = [[0, 0, 0],
            [0, 0, 0],
