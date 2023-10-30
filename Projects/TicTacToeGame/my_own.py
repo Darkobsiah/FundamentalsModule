@@ -12,7 +12,6 @@ def next_turn(row, column):
 
             buttons[row][column]['text'] = player
 
-            # If after a turn there is no winner the other is player is on turn
             if check_winner() is False:
                 player = players[1]
                 label.config(text=(players[1]+" turn"))
@@ -31,7 +30,7 @@ def next_turn(row, column):
                 player = players[0]
                 label.config(text=(players[0] + " turn"))
 
-            elif check_winner is True:
+            elif check_winner() is True:
                 label.config(text=(players[1] + " wins"))
 
             elif check_winner() == "Tie":
@@ -68,6 +67,10 @@ def check_winner():
         return True
 
     elif empty_spaces() is False:
+
+        for row in range(3):
+            for column in range(3):
+                buttons[row][column].config(bg="yellow")
         return "Tie"
 
     else:
@@ -89,12 +92,21 @@ def empty_spaces():
         return True
 
 def new_game():
-    pass
+
+    global player
+
+    player = random.choice(players)
+
+    label.config(text=player+" turn")
+
+    for row in range(3):
+        for column in range(3):
+            buttons[row][column].config(text="",bg="#F0F0F0")
 
 
 window = Tk()
 window.title("Tic-Tac-Toe")
-players = ["x", "o"]
+players = ["$", "&"]
 player = random.choice(players)
 buttons = [[0, 0, 0],
            [0, 0, 0],
@@ -103,7 +115,7 @@ buttons = [[0, 0, 0],
 label = Label(text= player + " turn", font=('consolas', 40))
 label.pack(side="top")
 
-reset_button = Button(text="restart", font=('consolas', 20), command=new_game())
+reset_button = Button(text="restart", font=('consolas', 20), command=new_game)
 reset_button.pack(side="top")
 
 frame = Frame(window)
