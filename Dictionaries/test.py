@@ -1,6 +1,3 @@
-my_dict = {
-    'fruit': 'apple',
-    'vegetable': 'cucumber'
-}
+dict_argument = dict(fruit='apple', vegetable='cucumber')
 
-print(my_dict)
+print(dict_argument)
