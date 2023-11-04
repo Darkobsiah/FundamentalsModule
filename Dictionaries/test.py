@@ -1,3 +1,3 @@
-dict_argument = dict(fruit='apple', vegetable='cucumber')
+dict_argument = dict(name='Slavi', age=22)
 
 print(dict_argument)
