@@ -1,0 +1,1 @@
+# Removes all the elements from a dictionary
