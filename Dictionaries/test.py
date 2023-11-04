@@ -1,7 +1,7 @@
-dict_argument = dict(name='Slavi', age=22)
+my_dict = {
+    'fruit': 'apple',
+    'vegetable': 'cucumber',
+    'diary': 'milk'
+}
 
-another_argument = dict(gender='male')
-
-new_dict = dict_argument, another_argument
-
-print(new_dict)
+print(my_dict)
