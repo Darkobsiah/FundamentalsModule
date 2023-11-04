@@ -1,1 +1,3 @@
-# Test anything here
+my_dict = {}
+
+print(my_dict)
