@@ -13,4 +13,4 @@ for product in searched_products:
     if product in products_dict:
         print(f'We have {products_dict[product]} of {product} left')
     else:
-        print(f'Sorry we don\'t have {product}')
+        print(f'Sorry, we don\'t have {product}')
