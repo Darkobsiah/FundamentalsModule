@@ -1,17 +1,12 @@
-sequence_of_words = input().split()
+words = input().split()
+dictionary = {}
 
-sequence_copy = sequence_of_words.copy()
-output_words = []
+for word in words:
+    word_lower = word.lower()
+    if word_lower not in dictionary:
+        dictionary[word_lower] = 0
+    dictionary[word_lower] += 1
 
-for word in sequence_of_words:
-    if sequence_copy.count(word) % 2 != 0:
-        output_words.append(word.lower())
-        sequence_copy.remove(word)
-        if word.upper() in sequence_copy:
-            sequence_copy.remove(word.upper())
-        if word.lower() in sequence_copy:
-            sequence_copy.remove(word.lower())
-
-
-for word in output_words:
-    print(word,end=' ')
+for key, value in dictionary.items():
+    if value % 2 != 0:
+        print(key, end=' ')
