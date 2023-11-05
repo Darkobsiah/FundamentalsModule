@@ -37,26 +37,34 @@ def show_contacts():
 
 
 def search_contacts():
-    contact = input('Enter contact here: ')
-    if contact in address_book:
-        print(f'\nContact found,')
-        print(f"Phone - {address_book[contact]['Phone']},\nAddress - {address_book[contact]['Address']}.")
-    else:
-        print('This contact does not exist')
-    answer = input(f'\nIf you want to search again choose (a)\n'
-                   f'and to go back to Main Menu choose (m): ')
     while True:
-        answer = answer.lower()
-        if answer == 'm':
-            return True
-        elif answer == 'a':
-            continue
+        contact = input('Enter contact here: ')
+        if contact in address_book:
+            print(f'\nContact found,')
+            print(f"Phone - {address_book[contact]['Phone']},\nAddress - {address_book[contact]['Address']}.")
         else:
-            answer = input('\nYour answer is invalid, please choose between\n'
-                           '(a) for another try,\n'
-                           '(m) to return back to Main Menu.')
+            print('\nThis contact does not exist')
+        answer = input(f'\nIf you want to search again choose (a)\n'
+                       f'and to go back to Main Menu choose (m): ')
+        while True:
+            answer = answer.lower()
+            if answer == 'm':
+                return True
+            elif answer == 'a':
+                break
+            else:
+                answer = input('\nYour answer is invalid, please choose between\n'
+                               '(a) for another try,\n'
+                               '(m) to return back to Main Menu.')
 
 
+def delete_contact():
+    name = input('Write the name of the contact you would like to delete: ')
+    if name in address_book:
+        address_book.pop(name)
+        print(f'\n{name} was deleted from your Phonebook.')
+        choose = input('\nIf you have the desire to delete more contacts choose (d),\n'
+                       'Otherwise in a way to return back to Main Menu choose (m):  ')
 
 
 def exit_program():
@@ -82,9 +90,9 @@ while True:
         elif int(choice) == 3:
             search_contacts()
         elif int(choice) == 4:
-            ...
+            delete_contact()
         elif int(choice) == 5:
-            print('Goodbye summoner!')
+            print('\nGoodbye, Dear User!')
             break
         else:
             print('\nYour chose is invalid.'
