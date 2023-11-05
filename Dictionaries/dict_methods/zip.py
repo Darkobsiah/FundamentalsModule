@@ -1,9 +1,10 @@
+numbers = [1, 2, 3]
+letters = ['a', 'b', 'c']
 
-# initialise
-s1 = {2, 3, 1}
+# numbers --> keys
+# letters --> values
+zipped = zip(numbers, letters)
 
-# initialise
-s2 = {'b', 'y', 'z'}
+print(dict(zipped))   # returns a dict
 
-# returns a dict of two zipped ones
-print(dict(zip(s1,s2)))
+type(zipped)   # <class 'zip'>
