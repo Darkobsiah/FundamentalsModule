@@ -1,12 +1,14 @@
 address_book = {}
-
+# TO DO
+# optimise your code with using ENTER for input
+# instead of having hundreds of useless checks
 
 def add_contact():
-    name = input('Enter the name: ')
+    name = input('\nEnter the name: ')
     phone = input('Enter the phone number: ')
     address = input('Enter address: ')
     address_book[name] = {'Phone' : phone, 'Address': address}
-    print(f'Contact {name} has been added!')
+    print(f'\nContact {name} has been added!')
 
 
 def show_contacts():
@@ -38,9 +40,9 @@ def show_contacts():
 
 def search_contacts():
     while True:
-        contact = input('Enter contact here: ')
+        contact = input('\nPlease enter the name of the contact you are searching for here: ')
         if contact in address_book:
-            print(f'\nContact found,')
+            print(f'\n Contact found,')
             print(f"Phone - {address_book[contact]['Phone']},\nAddress - {address_book[contact]['Address']}.")
         else:
             print('\nThis contact does not exist')
@@ -59,13 +61,35 @@ def search_contacts():
 
 
 def delete_contact():
-    name = input('Write the name of the contact you would like to delete: ')
-    if name in address_book:
-        address_book.pop(name)
-        print(f'\n{name} was deleted from your Phonebook.')
-        choose = input('\nIf you have the desire to delete more contacts choose (d),\n'
-                       'Otherwise in a way to return back to Main Menu choose (m):  ')
-
+    is_end = False
+    while not is_end:
+        name = input('\nWrite the name of the contact you would like to delete: ')
+        if name in address_book:
+            address_book.pop(name)
+            print(f'Contact {name} was successfully deleted from your Phonebook.')
+            while True:
+                choose = input('\nIf you have the desire to delete more contacts choose (d)\n'
+                               'Otherwise, in purpose to return back to Main Menu choose (m): ')
+                choose = choose.lower()
+                if choose == 'd':
+                    break
+                if choose == 'm':
+                    is_end = True
+        else:
+            print('\nThis name does not appear in your contacts.')
+            end_choice = input('\nIn case you want to end this operation choose (e)\n'
+                               'Otherwise just press enter or type something (-): ')
+            end_choice = end_choice.lower()
+            if end_choice == 'e':
+                return True
+            else:
+                is_end = True
+        if is_end:
+            break
+        name = input('\nWrite the name of the contact you would like to delete: ')
+        if name not in address_book:
+            print('\nThis name does not appear in your contacts.')
+            break
 
 def exit_program():
     print('\nThank you for using our ContactBook,\n'
@@ -78,7 +102,7 @@ while True:
     print('1. Add Contact')
     print('2. Show Contacts')
     print('3. Search Contact')
-    print('4. ')
+    print('4. Delete Contact')
     print('5. Exit Menu')
     choice = input('Please enter your choice (1/2/3/4/5): ')
 
