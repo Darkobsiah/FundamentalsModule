@@ -4,7 +4,7 @@ address_book = {}
 def add_contact():
     name = input('Enter the name: ')
     phone = input('Enter the phone number: ')
-    address = input('Enter the address: ')
+    address = input('Enter address: ')
     address_book[name] = {'Phone' : phone, 'Address': address}
     print(f'Contact {name} has been added!')
 
@@ -12,16 +12,16 @@ def add_contact():
 def show_contacts():
     print('\nList of your contacts:')
     for name in address_book:
-        print(name,end=' ')
+        print(f"- {name}",end=' ')
         print('')
-    answer = input('\nDo you want to be returned to the Main menu? (y/n): ')
+    answer = input('\nDo you want to be returned to the Main Menu? (y/n): ')
     while True:
         answer = answer.lower()
         if answer == 'y' or answer == 'yes' or answer == '(y)' or answer == '(yes)':
             return True
         elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
             sure = input('\nAre you sure you want to exit the program?\n'
-                         '-------y------------or------------n-------: ')
+                         '-------( y )---------or---------( n )-------: ')
             if sure == 'y' or sure == 'yes' or sure == '(y)' or sure == '(yes)':
                 exit_program()
             elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
@@ -31,17 +31,37 @@ def show_contacts():
                 elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
                     continue
                 else:
-                    answer = input('\nYour answer is invalid please choose between (y) or (n)')
+                    answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
         else:
-            answer = input('\nYour answer is invalid please choose between (y) or (n)')
+            answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
 
 
 def search_contacts():
+    contact = input('Enter contact here: ')
+    if contact in address_book:
+        print(f'\nContact found,')
+        print(f"Phone - {address_book[contact]['Phone']},\nAddress - {address_book[contact]['Address']}.")
+    else:
+        print('This contact does not exist')
+    answer = input(f'\nIf you want to search again choose (a)\n'
+                   f'and to go back to Main Menu choose (m): ')
+    while True:
+        answer = answer.lower()
+        if answer == 'm':
+            return True
+        elif answer == 'a':
+            continue
+        else:
+            answer = input('\nYour answer is invalid, please choose between\n'
+                           '(a) for another try,\n'
+                           '(m) to return back to Main Menu.')
+
+
 
 
 def exit_program():
     print('\nThank you for using our ContactBook,\n'
-          '**************Goodbye!**************')
+          '************__Goodbye!__************')
     exit()
 
 
@@ -67,7 +87,7 @@ while True:
             print('Goodbye summoner!')
             break
         else:
-            print('Your chose is invalid.'
+            print('\nYour chose is invalid.'
                   'Please use only 1, 2, 3, 4 or 5')
     else:
         print('\nYour chose is invalid.'
