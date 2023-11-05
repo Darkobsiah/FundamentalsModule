@@ -1,14 +1,12 @@
-lines = int(input())
+n = int(input())
+synonyms = {}
 
-my_dict = {}
-
-for _ in range(lines):
+for _ in range(n):
     word = input()
     synonym = input()
-    if word in my_dict:
-        my_dict[word] += f', {synonym}'
-    else:
-        my_dict[word] = synonym
+    if word not in synonyms:
+        synonyms[word] = []
+    synonyms[word].append(synonym)
 
-for key, value in my_dict.items():
-    print(f'{key} - {value}')
+for word in synonyms:
+    print(f"{word} - {', '.join(synonyms[word])}")
