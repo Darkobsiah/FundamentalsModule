@@ -8,42 +8,45 @@ def add_contact():
     phone = input('Enter the phone number: ')
     address = input('Enter address: ')
     address_book[name] = {'Phone' : phone, 'Address': address}
-    print(f'\nContact {name} has been added!')
+    print(f'\n{name} was successfully added to Phonebook!')
 
 
 def show_contacts():
     print('\nList of your contacts:')
-    for name in address_book:
-        print(f"- {name}",end=' ')
-        print('')
-    answer = input('\nDo you want to be returned to the Main Menu? (y/n): ')
-    while True:
-        answer = answer.lower()
-        if answer == 'y' or answer == 'yes' or answer == '(y)' or answer == '(yes)':
-            return True
-        elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
-            sure = input('\nAre you sure you want to exit the program?\n'
-                         '-------( y )---------or---------( n )-------: ')
-            if sure == 'y' or sure == 'yes' or sure == '(y)' or sure == '(yes)':
-                exit_program()
+    if address_book:
+        for name in address_book:
+            print(f"- {name}",end=' ')
+            print('')
+        answer = input('\nDo you want to be returned to the Main Menu? (y/n): ')
+        while True:
+            answer = answer.lower()
+            if answer == 'y' or answer == 'yes' or answer == '(y)' or answer == '(yes)':
+                return True
             elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
-                answer = input('\nDo you want to be returned to the Main menu? (y/n): ')
-                if answer == 'y' or answer == 'yes' or answer == '(y)' or answer == '(yes)':
-                    break
+                sure = input('\nAre you sure you want to exit the program?\n'
+                             '-------( y )---------or---------( n )-------: ')
+                if sure == 'y' or sure == 'yes' or sure == '(y)' or sure == '(yes)':
+                    exit_program()
                 elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
-                    continue
-                else:
-                    answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
-        else:
-            answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
+                    answer = input('\nDo you want to be returned to the Main menu? (y/n): ')
+                    if answer == 'y' or answer == 'yes' or answer == '(y)' or answer == '(yes)':
+                        break
+                    elif answer == 'n' or answer == 'no' or answer == '(n)' or answer == '(yes)':
+                        continue
+                    else:
+                        answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
+            else:
+                answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
+    else:
+        print('Empty...')
 
 
 def search_contacts():
     while True:
         contact = input('\nPlease enter the name of the contact you are searching for here: ')
         if contact in address_book:
-            print(f'\n Contact found,')
-            print(f"Phone - {address_book[contact]['Phone']},\nAddress - {address_book[contact]['Address']}.")
+            print(f'\nContact found.\nInfo:')
+            print(f"Phone - {address_book[contact]['Phone']}\nAddress - {address_book[contact]['Address']}")
         else:
             print('\nThis contact does not exist')
         answer = input(f'\nIf you want to search again choose (a)\n'
@@ -62,34 +65,15 @@ def search_contacts():
 
 def delete_contact():
     is_end = False
-    while not is_end:
-        name = input('\nWrite the name of the contact you would like to delete: ')
-        if name in address_book:
-            address_book.pop(name)
-            print(f'Contact {name} was successfully deleted from your Phonebook.')
-            while True:
-                choose = input('\nIf you have the desire to delete more contacts choose (d)\n'
-                               'Otherwise, in purpose to return back to Main Menu choose (m): ')
-                choose = choose.lower()
-                if choose == 'd':
-                    break
-                if choose == 'm':
-                    is_end = True
-        else:
-            print('\nThis name does not appear in your contacts.')
-            end_choice = input('\nIn case you want to end this operation choose (e)\n'
-                               'Otherwise just press enter or type something (-): ')
-            end_choice = end_choice.lower()
-            if end_choice == 'e':
-                return True
-            else:
-                is_end = True
-        if is_end:
-            break
-        name = input('\nWrite the name of the contact you would like to delete: ')
-        if name not in address_book:
-            print('\nThis name does not appear in your contacts.')
-            break
+    name = input('\nWrite the name of the contact you would like to delete: ')
+    if name in address_book:
+        address_book.pop(name)
+        print(f'{name} was successfully deleted from your Phonebook.')
+        return True
+    else:
+        print('\nThis name does not appear in your contacts.')
+        return False
+
 
 def exit_program():
     print('\nThank you for using our ContactBook,\n'
