@@ -6,5 +6,5 @@ students_records = {
 
 for name, value in students_records.items():
     print(f'***{name}***')
-    for subject, score in value.items():
-        print(f'{subject} - {score}')
+    for subject, degree in value.items():
+        print(f'{subject} - {degree}')
