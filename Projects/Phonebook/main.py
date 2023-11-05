@@ -13,10 +13,13 @@ def add_contact():
 
 def show_contacts():
     print('\nList of your contacts:')
-    if address_book:
-        for name in address_book:
-            print(f"- {name}",end=' ')
-            print('')
+    if not address_book:
+        print('Empty...')
+    else:
+        for name, details in address_book.items():
+            print(f"Name: {name}")
+            print(f"Phone: {details['Phone']}")
+            print(f"Address: {details['Address']}\n")
         answer = input('\nDo you want to be returned to the Main Menu? (y/n): ')
         while True:
             answer = answer.lower()
@@ -37,8 +40,7 @@ def show_contacts():
                         answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
             else:
                 answer = input('\nYour answer is invalid, please choose between (y) and (n): ')
-    else:
-        print('Empty...')
+
 
 
 def search_contacts():
