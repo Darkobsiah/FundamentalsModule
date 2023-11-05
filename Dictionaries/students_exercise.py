@@ -1,22 +1,16 @@
-data_input = input()
-
-initialised_list = []
-output_list = []
+students = []
+searched_course = None
 
 while True:
-    if ':' not in data_input:
-        searched_course = data_input
+    student_info = input()
+
+    if ':' not in student_info:
+        searched_course = student_info
         break
-    name, value, course = data_input.split(':')
-    initialised_list.append({'student': {'name': name, 'value': value, 'course': course}})
-    data_input = input()
 
-print(initialised_list)
-for element in initialised_list:
-    for person, info in element.items():
-        if searched_course in info['course']:
-            output_list.append(info['name'])
-            output_list.append(info['value'])
+    name, ID, course = student_info.split(':')
+    students.append({'name': name, 'ID': ID, 'course': course})
 
-for i in range(0, len(output_list), 2):
-    print(f'{output_list[i]} - {output_list[i+ 1]}')
+for student in students:
+    if searched_course.startswith(student['course'][0:3]):
+        print(f"{student['name']} - {student['ID']}")
