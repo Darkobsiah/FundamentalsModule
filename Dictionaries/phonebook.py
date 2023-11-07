@@ -33,3 +33,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+print('\nThank you for using our Phonebook 1.2')
+print(f"{'*' * 5}Stay tuned for new updates{'*' * 6}")
