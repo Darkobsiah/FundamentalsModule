@@ -13,12 +13,15 @@ while True:
         break
 
     if counter % 2 != 0:
-        # resource one (even)
-        miner_dictionary[command] = ''
+        # if resource is not implemented as a key in the dict:
+        if command not in miner_dictionary.keys():
+            # create a new key with value 0
+            miner_dictionary[command] = 0
+
     else:
         # if counter is even
         # adding the quantity of the given resource
-        miner_dictionary[last_command] = command
+        miner_dictionary[last_command] += int(command)
     # save the name of the resource
     last_command = command
 
