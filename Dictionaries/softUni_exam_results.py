@@ -1,12 +1,15 @@
 # Initialise a dict to store the data
 order_info = {}
 
+# Initialise a While loop
 while True:
     command = input()
+
     # break condition
     if command == "buy":
         break
 
+    # Split by space and pass numbers into float
     name, price, quantity = command.split()
     price, quantity = float(price), float(quantity)
 
