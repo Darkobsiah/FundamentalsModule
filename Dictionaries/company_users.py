@@ -17,7 +17,7 @@ while True:
         company_info[company].append(employee_id)
 
 # print name of the company
-      # -- student ID
+        # -- student ID
 for name, students in company_info.items():
     print(f"{name}")
     for student in students:
