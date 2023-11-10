@@ -4,9 +4,12 @@ user_credentials = {}
 user_profile_info = {}
 
 
+def add_user_info(username, credentials):
+    ...
+
+
 def save_credentials(user, password, credentials):
     credentials[user] = {'pass': password}
-    print(credentials)
     return True
 
 
@@ -63,18 +66,36 @@ def password_validator(username: str, user_pass: str, credentials: dict):
 
 
 def main():
-    log_or_reg = input('Hello user, if you already have an account input /log/'
-                       'otherwise, write the following in the console /reg/')
-    if log_or_reg.lower() == 'log':
-        name = input('Name: ')
+    log_or_reg = input('Hello user, if you already have an account input /log/\n'
+                       'otherwise, write the following in the console /reg/: ')
+    if log_or_reg.lower() == 'register' or log_or_reg.lower() == 'reg':
+        while 1:
+            name = input('Enter a username: ')
+            if name not in user_credentials.keys():
+                while True:
+                    password1 = input('Enter password: ')
+                    if password_validator(name, password1, user_credentials):
+                        password2 = input('Enter it again: ')
+                        if password1 == password2:
+                            break
+                save_credentials(name, password2, user_credentials)
+                add_user_info()
+
+
+    elif log_or_reg.lower() == 'login' or log_or_reg.lower() == 'log':
         while True:
-            password = input('Enter password: ')
+            name = input('Please enter your username here: ')
+            if name in user_credentials.keys():
+                pass
+            else:
+                print('This username have no account in the server.\n')
+                answer = ('If you want register one write /m/\n'
+                          'but on purpose to input a new one use /n/')
+                if answer.lower() == 'm':
+                    main()
+                elif answer == 'n':
+                    continue
 
-            if password_validator(name, password, user_credentials):
-                break
-
-        save_credentials(name, password, user_credentials)
-    elif log_or_reg
 
 
 if __name__ == '__main__':
