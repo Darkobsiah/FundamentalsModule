@@ -1,15 +1,31 @@
-from cryptography.fernet import Fernet
-import getpass
+def register_credentials(username, password, credentials):
+    # generate a key for encryption and decryption
+    # You can use fernet to generate
+    # the key or use random key generator
+    # here I'm using fernet to generate key
 
-
-def encrypting(message):
     key = Fernet.generate_key()
-    f = Fernet(key)
-    encrypt_token = f.encrypt(b'')
-    print(encrypt_token)
 
-    decrypt_token = f.decrypt(encrypt_token)
-    print(decrypt_token)
+    # Instance the Fernet class with the key
+    fernet = Fernet(key)
 
-password = input('Enter password: ')
-encrypting(password)
+    # then use the Fernet class instance
+    # to encrypt the string string must
+    # be encoded to byte string before encryption
+
+    encMessage = fernet.encrypt(password.encode())
+
+    credentials[username] = {'key': key, 'encMessage': encMessage}
+    print(credentials)
+
+
+    print("encrypted string: ", encMessage)
+
+    # decrypt the encrypted string with the
+    # Fernet instance of the key,
+    # that was used for encrypting the string
+    # encoded byte string is returned by decrypt method,
+    # so decode it to string with decode methods
+    decMessage = fernet.decrypt(encMessage).decode()
+    print(credentials)
+    print("decrypted string: ", decMessage)
