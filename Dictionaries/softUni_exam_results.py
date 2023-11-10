@@ -1,32 +1,36 @@
-# Initialise a dict to store the data
-order_info = {}
+data_dict = {}
+banned_users = []
+java = 0
+c_sharp = 0
 
-# Initialise a While loop
-while True:
+# endless loop
+while 1:
     command = input()
+    if not command[0] in banned_users:
+        # break condition
+        if 'exam finished' in command:
+            break
+        if 'banned' in command:
+            command = command.split('-')
+            banned_users.append(command[0])
+            continue
+        command = command.split('-')
+        name = command[0]
+        language = command[1]
+        points = command[2]
+        if name not in data_dict.keys():
+            data_dict[name] = {"language": language,
+                               "points": points}
+    if language == 'Java':
+        java += 1
+    elif language == 'C#':
+        c_sharp += 1
 
-    # break condition
-    if command == "buy":
-        break
+print('Results:')
+for key, values in data_dict.items():
+    if key not in banned_users:
+        print(f"{key} | {data_dict[key]['points']}")
+print('Submissions:')
+print(f'Java - {java}')
+print(f'C# - {c_sharp}')
 
-    # Split by space and pass numbers into float
-    name, price, quantity = command.split()
-    price, quantity = float(price), float(quantity)
-
-    if name not in order_info.keys():
-        order_info[name] = [price, 0]
-    order_info[name][1] += quantity
-    if price != order_info[name][0]:
-        order_info[name][0] = price
-
-for key, value in order_info.items():
-    total = 0
-    x = 0
-    counter = 0
-    for v in value:
-        if counter == 0:
-            x = v
-        else:
-            total = x * v
-        counter += 1
-    print(f"{key} -> {total:.2f}")
