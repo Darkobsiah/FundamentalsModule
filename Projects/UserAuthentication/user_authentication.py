@@ -4,8 +4,54 @@ user_credentials = {}
 user_profile_info = {}
 
 
-def add_user_info(username, credentials):
-    ...
+def register_user(credentials: dict, user_profile):
+    name = input('\nEnter a username: ')
+    passes = False
+    while 1:
+        if name not in user_credentials.keys():
+            password1 = input('Enter password: ')
+            if password_validator(name, password1, user_credentials):
+                while True:
+                    password2 = input('Enter it again: ')
+                    if password1 == password2:
+                        passes = True
+                        break
+                    else:
+                        print('Invalid try to repeat the password. Try with another one.\n')
+                        break
+
+                if passes:
+                    break
+    save_credentials(name, password2, user_credentials)
+    add_user_info(name, user_credentials, user_profile)
+    print(f'\n---------------------------------------\n'
+          f'Your profile has been created, {name}!\n'
+          f'---------------------------------------')
+    return True
+
+
+def login_user(credentials: dict):
+    while True:
+        name = input('Please enter your username here: ')
+        if name in credentials.keys():
+            pass
+        else:
+            print('This username have no account in the server.\n')
+            answer = ('If you want register one write /m/\n'
+                      'but on purpose to input a new one use /n/')
+            if answer.lower() == 'm':
+                main()
+            elif answer == 'n':
+                continue
+
+
+def add_user_info(username, credentials, user_profiles):
+    name = input('\nEnter first and last name: ')
+    age = input('\nEnter your age: ')
+    place = input('\nWhere do you live at the moment: ')
+
+    user_profiles[username] = {'name': name, 'age': age, 'place': place}
+    return user_profiles
 
 
 def save_credentials(user, password, credentials):
@@ -66,35 +112,13 @@ def password_validator(username: str, user_pass: str, credentials: dict):
 
 
 def main():
-    log_or_reg = input('Hello user, if you already have an account input /log/\n'
+    log_or_reg = input('\nHello user, if you already have an account input /log/\n'
                        'otherwise, write the following in the console /reg/: ')
     if log_or_reg.lower() == 'register' or log_or_reg.lower() == 'reg':
-        while 1:
-            name = input('Enter a username: ')
-            if name not in user_credentials.keys():
-                while True:
-                    password1 = input('Enter password: ')
-                    if password_validator(name, password1, user_credentials):
-                        password2 = input('Enter it again: ')
-                        if password1 == password2:
-                            break
-                save_credentials(name, password2, user_credentials)
-                add_user_info()
-
+        register_user(user_credentials, user_profile_info)
 
     elif log_or_reg.lower() == 'login' or log_or_reg.lower() == 'log':
-        while True:
-            name = input('Please enter your username here: ')
-            if name in user_credentials.keys():
-                pass
-            else:
-                print('This username have no account in the server.\n')
-                answer = ('If you want register one write /m/\n'
-                          'but on purpose to input a new one use /n/')
-                if answer.lower() == 'm':
-                    main()
-                elif answer == 'n':
-                    continue
+        login_user(user_credentials)
 
 
 
