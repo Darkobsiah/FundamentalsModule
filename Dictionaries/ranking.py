@@ -1,5 +1,5 @@
 courses = {}
-
+users_memory = {}
 
 while True:
     command = input()
@@ -21,7 +21,15 @@ while True:
         is_valid = False
     elif courses[contest] != password:
         is_valid = False
-    else:
+    else:   # Valid contest and password
+        if username not in users_memory:
+            users_memory[username] = []
+        users_memory[username].append({'username': username,
+                                       'contest': contest,
+                                       'points': 0})
+        if username[username]['points'] < password:
+            username[username]['points'] = password
 
-
+most_valuable_user = ''
+for
 
