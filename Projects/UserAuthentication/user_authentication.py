@@ -9,37 +9,33 @@ def register_user(credentials: dict, user_profile: dict):
     passes = False
     while 1:
         if name not in user_credentials.keys():
-            password1 = input('Enter password: ')
+            password1 = input('Enter a password: ')
             if password_validator(name, password1, user_credentials):
-                counter = 0
-                while counter > 0:
-                    password2 = input('Enter it again: ')
+                counter = 3
+                while True:
+                    password2 = input('Enter the same password: ')
                     if password1 == password2:
                         passes = True
+                        print('Password saved')
                         break
                     else:
                         counter -= 1
-
-                        break
-
-                # while counter > 0:
-                #     user_input = input('\nEnter your password: ')
-                #     if user_input == password:
-                #         show_user_info(username, user_profile_info)
-                #     else:
-                #         counter -= 1
-                #         print('\nIncorrect password!')
-                #         print(f'{counter} tries left.')
-                #         continue
-
-                if passes:
-                    break
+                        if counter <= 0:
+                            break
+                        print('\nIncorrect try to repeat your password!')
+                        print(f'{counter} tries left.')
+                        continue
+        if passes:
+            break
+        else:
+            print(f'\nUnfortunately you failed to repeat your password. Try again with new one!')
     credentials[name] = {'pass': password2}
     add_user_info(name, user_credentials, user_profile)
+
     print(f'\n---------------------------------------\n'
-          f'Your profile has been created, {name}!\n'
+          f'-Your profile has been created, {name}!\n'
           f'---------------------------------------')
-    # test
+
     print('\nNow you should log into it.')
     login_user(credentials, name)
     return True
@@ -47,11 +43,11 @@ def register_user(credentials: dict, user_profile: dict):
 
 def add_user_info(username: str, credentials: dict, user_profiles: dict):
     print('\nPlease give us some details about yourself.')
-    name = input('\nEnter first and last name: ')
-    age = input('\nEnter your age: ')
-    place = input('\nWhere do you live at the moment: ')
+    name = input('Enter first and last name: ')
+    age = input('Enter your age: ')
+    place = input('Where do you live at the moment: ')
 
-    user_profiles[username] = {'name': name, 'age': age, 'place': place}
+    user_profiles[username] = {'First and last name': name, 'Age': age, 'Location': place}
     return user_profiles
 
 
@@ -59,10 +55,10 @@ def login_user(credentials: dict, username: str):
     while True:
         name = input('\nPlease, enter your username here: ')
         if name in credentials.keys():
-            password = credentials[name]
+            password = credentials[name]['pass']
             counter = 3
             while counter > 0:
-                user_input = input('\nEnter your password: ')
+                user_input = input('Enter your password: ')
                 if user_input == password:
                     show_user_info(username, user_profile_info)
                 else:
@@ -72,20 +68,23 @@ def login_user(credentials: dict, username: str):
                     continue
         else:
             print('\nThis username have no account in the server.\n')
-            answer = input('If you want register write - (m)\n'
-                           'if you are already registered try again with - (n) ')
-            if answer.lower() == 'm':
+            answer = input('If you want register one, write - (r)\n'
+                           'In case that you already have an account\n'
+                           '                 try again with - (n) ')
+            if answer.lower() == 'r':
                 register_user(credentials, user_profile_info)
             elif answer == 'n':
                 continue
 
 
 def show_user_info(username: str, profiles_info: dict):
-    print(f'You successfully logged into your account {username}')
-    print('|----------------------|----------------------------|')
+    print(f'You successfully logged into your account, {username}!')
     print('Your profile info:')
-    print(profiles_info[username])
-    print('|----------------------|----------------------------|')
+    print('|--------------------------------------------------|')
+    user_profile = profiles_info[username]
+    for key, value in user_profile:
+        print(f'{key} - {value}')
+    print('|--------------------------------------------------|')
 
 
 def encrypt_decrypt_messages(command, username, password, credentials):
