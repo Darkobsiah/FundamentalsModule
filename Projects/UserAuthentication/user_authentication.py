@@ -33,10 +33,10 @@ def register_user(credentials: dict, user_profile: dict):
     add_user_info(name, user_credentials, user_profile)
 
     print(f'\n---------------------------------------\n'
-          f'-Your profile has been created, {name}!\n'
+          f'-Your profile has just been created, {name}!\n'
           f'---------------------------------------')
 
-    print('\nNow you should log into it.')
+    print('\nNow you should login.')
     login_user(credentials, name)
     return True
 
@@ -81,8 +81,7 @@ def show_user_info(username: str, profiles_info: dict):
     print(f'You successfully logged into your account, {username}!')
     print('Your profile info:')
     print('|--------------------------------------------------|')
-    user_profile = profiles_info[username]
-    for key, value in user_profile:
+    for key, value in profiles_info[username].items():
         print(f'{key} - {value}')
     print('|--------------------------------------------------|')
 
