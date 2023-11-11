@@ -186,6 +186,8 @@ def main():
 if __name__ == '__main__':
     main()
 
-
+# Implement password hashing for improved security. Allow users to change their passwords.
+# Store user profiles in a separate dictionary and associate them with the user's username.
+# Implement error handling for invalid input.
 
 
