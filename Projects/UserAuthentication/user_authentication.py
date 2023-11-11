@@ -7,28 +7,28 @@ user_profile_info = {}
 def encrypt_decrypt_messages(command, username, password, credentials):
     if command == 'encrypt':
         key = Fernet.generate_key()
-        fernet = Fernet(key)
+        variable = Fernet(key)
 
-        # then use the Fernet class instance
+        # then use the Variable class instance
         # to encrypt the string string must
         # be encoded to byte string before encryption
-        encMessage = fernet.encrypt(password.encode())
+        enc_message = variable.encrypt(password.encode())
 
-        credentials[username] = {'key': key, 'encMessage': encMessage}
+        credentials[username] = {'key': key, 'encMessage': enc_message}
         print(credentials)
     else:
-        fernet = Fernet(credentials['key'])
+        variable = Fernet(credentials['key'])
         # decrypt the encrypted string with the
-        # Fernet instance of the key,
+        # Variable instance of the key,
         # that was used for encrypting the string
         # encoded byte string is returned by decrypt method,
         # so decode it to string with decode methods
-        decMessage = fernet.decrypt(password).decode()
+        dec_message = variable.decrypt(password).decode()
         print(credentials)
-        print("decrypted string: ", decMessage)
+        print("decrypted string: ", dec_message)
 
 
-def password_validator(username: str, user_pass: str, credentials: dict):
+def password_validator(user_pass: str):
     valid = True
     special = user_pass.lower()
     alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
@@ -68,7 +68,7 @@ def register_user(credentials: dict, user_profile: dict):
     passes = False
     while 1:
         password1 = input('Enter a password: ')
-        if password_validator(name, password1, user_credentials):
+        if password_validator(password1):
             counter = 3
             while True:
                 password2 = input('Enter the same password: ')
@@ -88,9 +88,9 @@ def register_user(credentials: dict, user_profile: dict):
             break
         else:
             print(f'\nUnfortunately you failed to repeat your password. Try again with new one!')
-    credentials[name] = {'pass': password2}
+    credentials[name] = {'pass': password1}
     print('\nPassword was saved successfully.')
-    add_user_info(name, user_credentials, user_profile)
+    add_user_info(name, user_profile)
 
     print(f'\n---------------------------------------\n'
           f'-Your profile has just been created, {name}!\n'
@@ -101,7 +101,7 @@ def register_user(credentials: dict, user_profile: dict):
     return True
 
 
-def add_user_info(username: str, credentials: dict, user_profiles: dict):
+def add_user_info(username: str, user_profiles: dict):
     print('\nPlease give us some details about yourself.')
     name = input('Enter first and last name: ')
     age = input('Enter your age: ')
@@ -153,12 +153,13 @@ def after_login():
                            'and Exit the program with (e): ')
         if user_input.lower() == 'i':
             pass
-        elif user_input.lower()== 'm':
+        elif user_input.lower() == 'm':
             main()
         elif user_input.lower() == 'e':
             exit()
         else:
             print('Error: Invalid input')
+
 
 def main():
 
@@ -178,4 +179,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
 
