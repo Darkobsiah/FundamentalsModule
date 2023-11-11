@@ -140,10 +140,16 @@ def log_user_in(credentials: dict):
 def show_user_info(username: str, profiles_info: dict):
     print(f'\nYou had successfully logged into your account, {username}!')
     print('|Profile info:')
-    print('|--------------------------------------------------|')
+    # calculate the length of the borders
+    max_length = 0
+    for key, value in profiles_info[username].items():
+        length = len(key) + len(value) + 5
+        if length > max_length:
+            max_length = length
+    print(f"|{max_length * '-'}|")
     for key, value in profiles_info[username].items():
         print(f'| {key} - {value}')
-    print('|--------------------------------------------------|')
+    print(f"|{max_length * '-'}|")
     after_login()
 
 
