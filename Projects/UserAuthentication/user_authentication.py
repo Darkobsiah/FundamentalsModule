@@ -4,21 +4,33 @@ user_credentials = {}
 user_profile_info = {}
 
 
-def register_user(credentials: dict, user_profile):
+def register_user(credentials: dict, user_profile: dict):
     name = input('\nEnter a username: ')
     passes = False
     while 1:
         if name not in user_credentials.keys():
             password1 = input('Enter password: ')
             if password_validator(name, password1, user_credentials):
-                while True:
+                counter = 0
+                while counter > 0:
                     password2 = input('Enter it again: ')
                     if password1 == password2:
                         passes = True
                         break
                     else:
-                        print('Invalid try to repeat the password. Try with another one.\n')
+                        counter -= 1
+
                         break
+
+                # while counter > 0:
+                #     user_input = input('\nEnter your password: ')
+                #     if user_input == password:
+                #         show_user_info(username, user_profile_info)
+                #     else:
+                #         counter -= 1
+                #         print('\nIncorrect password!')
+                #         print(f'{counter} tries left.')
+                #         continue
 
                 if passes:
                     break
@@ -29,12 +41,12 @@ def register_user(credentials: dict, user_profile):
           f'---------------------------------------')
     # test
     print('\nNow you should log into it.')
-    login_user(credentials)
+    login_user(credentials, name)
     return True
 
 
-def add_user_info(username, credentials, user_profiles):
-    print('Please give us some details about yourself.')
+def add_user_info(username: str, credentials: dict, user_profiles: dict):
+    print('\nPlease give us some details about yourself.')
     name = input('\nEnter first and last name: ')
     age = input('\nEnter your age: ')
     place = input('\nWhere do you live at the moment: ')
@@ -43,7 +55,7 @@ def add_user_info(username, credentials, user_profiles):
     return user_profiles
 
 
-def login_user(credentials: dict):
+def login_user(credentials: dict, username: str):
     while True:
         name = input('\nPlease, enter your username here: ')
         if name in credentials.keys():
@@ -52,15 +64,12 @@ def login_user(credentials: dict):
             while counter > 0:
                 user_input = input('\nEnter your password: ')
                 if user_input == password:
-                    show_user_info()
+                    show_user_info(username, user_profile_info)
                 else:
                     counter -= 1
                     print('\nIncorrect password!')
                     print(f'{counter} tries left.')
                     continue
-
-
-
         else:
             print('\nThis username have no account in the server.\n')
             answer = input('If you want register write - (m)\n'
@@ -71,9 +80,12 @@ def login_user(credentials: dict):
                 continue
 
 
-
-def show_user_info():
-    pass
+def show_user_info(username: str, profiles_info: dict):
+    print(f'You successfully logged into your account {username}')
+    print('|----------------------|----------------------------|')
+    print('Your profile info:')
+    print(profiles_info[username])
+    print('|----------------------|----------------------------|')
 
 
 def encrypt_decrypt_messages(command, username, password, credentials):
@@ -122,15 +134,17 @@ def password_validator(username: str, user_pass: str, credentials: dict):
         print('Password must have at least 2 digits')
         valid = False
     if valid:
-        print('Password is valid')
+        print('\nPassword is valid')
         return True
     else:
         return ''
 
 
 def main():
+
     log_or_reg = input('\nHello user, if you already have an account input /log/\n'
                        'otherwise, write the following in the console /reg/: ')
+
     if log_or_reg.lower() == 'register' or log_or_reg.lower() == 'reg':
         register_user(user_credentials, user_profile_info)
 
