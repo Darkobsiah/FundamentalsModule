@@ -22,33 +22,19 @@ def register_user(credentials: dict, user_profile):
 
                 if passes:
                     break
-    save_credentials(name, password2, user_credentials)
+    credentials[name] = {'pass': password2}
     add_user_info(name, user_credentials, user_profile)
     print(f'\n---------------------------------------\n'
           f'Your profile has been created, {name}!\n'
           f'---------------------------------------')
     # test
-    print('Now you should log into it.')
+    print('\nNow you should log into it.')
     login_user(credentials)
     return True
 
 
-def login_user(credentials: dict):
-    while True:
-        name = input('Please enter your username here: ')
-        if name in credentials.keys():
-            pass
-        else:
-            print('This username have no account in the server.\n')
-            answer = ('If you want register one write /m/\n'
-                      'but on purpose to input a new one use /n/')
-            if answer.lower() == 'm':
-                main()
-            elif answer == 'n':
-                continue
-
-
 def add_user_info(username, credentials, user_profiles):
+    print('Please give us some details about yourself.')
     name = input('\nEnter first and last name: ')
     age = input('\nEnter your age: ')
     place = input('\nWhere do you live at the moment: ')
@@ -57,9 +43,37 @@ def add_user_info(username, credentials, user_profiles):
     return user_profiles
 
 
-def save_credentials(user, password, credentials):
-    credentials[user] = {'pass': password}
-    return True
+def login_user(credentials: dict):
+    while True:
+        name = input('\nPlease, enter your username here: ')
+        if name in credentials.keys():
+            password = credentials[name]
+            counter = 3
+            while counter > 0:
+                user_input = input('\nEnter your password: ')
+                if user_input == password:
+                    show_user_info()
+                else:
+                    counter -= 1
+                    print('\nIncorrect password!')
+                    print(f'{counter} tries left.')
+                    continue
+
+
+
+        else:
+            print('\nThis username have no account in the server.\n')
+            answer = input('If you want register write - (m)\n'
+                           'if you are already registered try again with - (n) ')
+            if answer.lower() == 'm':
+                register_user(credentials, user_profile_info)
+            elif answer == 'n':
+                continue
+
+
+
+def show_user_info():
+    pass
 
 
 def encrypt_decrypt_messages(command, username, password, credentials):
@@ -123,6 +137,9 @@ def main():
     elif log_or_reg.lower() == 'login' or log_or_reg.lower() == 'log':
         login_user(user_credentials)
 
+    else:
+        print(f'\nInvalid answer, please try again...')
+        main()
 
 
 if __name__ == '__main__':
