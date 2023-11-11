@@ -27,6 +27,9 @@ def register_user(credentials: dict, user_profile):
     print(f'\n---------------------------------------\n'
           f'Your profile has been created, {name}!\n'
           f'---------------------------------------')
+    # test
+    print('Now you should log into it.')
+    login_user(credentials)
     return True
 
 
