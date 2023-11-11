@@ -74,7 +74,6 @@ def register_user(credentials: dict, user_profile: dict):
                 password2 = input('Enter the same password: ')
                 if password1 == password2:
                     passes = True
-                    print('\nPassword was saved')
                     break
                 else:
                     counter -= 1
@@ -90,6 +89,7 @@ def register_user(credentials: dict, user_profile: dict):
         else:
             print(f'\nUnfortunately you failed to repeat your password. Try again with new one!')
     credentials[name] = {'pass': password2}
+    print('\nPassword was saved successfully.')
     add_user_info(name, user_credentials, user_profile)
 
     print(f'\n---------------------------------------\n'
@@ -97,7 +97,7 @@ def register_user(credentials: dict, user_profile: dict):
           f'---------------------------------------')
 
     print('\nNow you should login.')
-    log_user_in(credentials, name)
+    log_user_in(credentials)
     return True
 
 
@@ -111,11 +111,11 @@ def add_user_info(username: str, credentials: dict, user_profiles: dict):
     return user_profiles
 
 
-def log_user_in(credentials: dict, username: str):
+def log_user_in(credentials: dict):
     while True:
-        name = input('\nPlease, enter your username here: ')
-        if name in credentials.keys():
-            password = credentials[name]['pass']
+        username = input('\nPlease, enter your username here: ')
+        if username in credentials.keys():
+            password = credentials[username]['pass']
             counter = 3
             while counter > 0:
                 user_input = input('Enter your password: ')
@@ -138,11 +138,11 @@ def log_user_in(credentials: dict, username: str):
 
 
 def show_user_info(username: str, profiles_info: dict):
-    print(f'\nYou successfully logged into your account, {username}!')
-    print('Your profile info:')
+    print(f'\nYou had successfully logged into your account, {username}!')
+    print('|Profile info:')
     print('|--------------------------------------------------|')
     for key, value in profiles_info[username].items():
-        print(f'{key} - {value}')
+        print(f'|-{key} - {value}')
     print('|--------------------------------------------------|')
     exit()
 
