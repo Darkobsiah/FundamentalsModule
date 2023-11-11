@@ -9,5 +9,7 @@ for i in range(5, 0, -1):
     if counter % 5 == 0:
         while 1 == 1:
             print('Slavi Hubostnika' * 10)
+            print()
             time.sleep(0.5)
+
 
