@@ -130,10 +130,10 @@ def log_user_in(credentials: dict):
             print('\nError: No such user in the server.\n')
             answer = input('If you want register one, write - (r)\n'
                            'In case that you already have an account\n'
-                           '                 try again with - (n) ')
+                           '                 try again with - (a) ')
             if answer.lower() == 'r':
                 register_user(credentials, user_profile_info)
-            elif answer == 'n':
+            elif answer == 'a':
                 continue
 
 
@@ -149,9 +149,8 @@ def show_user_info(username: str, profiles_info: dict):
 
 def after_login():
     while True:
-        user_input = input('\nIn case you want to add more info about you, enter (i)\n'
-                           'If you want to be returned in the main menu (m)'
-                           'To exit the program input (e): ')
+        user_input = input('\nTo add more info about you, enter (i)\n'
+                           'and Exit the program with (e): ')
         if user_input.lower() == 'i':
             pass
         elif user_input.lower()== 'm':
@@ -179,3 +178,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
