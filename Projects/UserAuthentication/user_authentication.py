@@ -36,21 +36,21 @@ def password_validator(username: str, user_pass: str, credentials: dict):
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     integer_counter = 0
     if 6 > len(special) or 10 < len(special):
-        print('Password must be between 6 and 10 characters')
+        print('Password must be between 6 and 10 characters.')
         valid = False
     for symbol in special:
         if symbol not in alphabet:
             if symbol not in numbers:
-                print('Password must consist only of letters and digits')
+                print('Password must consist only of letters and digits.')
                 valid = False
         if symbol in numbers:
             integer_counter += 1
 
     if integer_counter < 2:
-        print('Password must have at least 2 digits')
+        print('Password must have at least 2 digits.')
         valid = False
     if valid:
-        print('\nPassword is valid')
+        print('\nPassword is valid.')
         return True
     else:
         return ''
@@ -127,7 +127,7 @@ def log_user_in(credentials: dict):
                     print(f'{counter} tries left.')
                     continue
         else:
-            print('\nThis username have no account in the server.\n')
+            print('\nError: No such user in the server.\n')
             answer = input('If you want register one, write - (r)\n'
                            'In case that you already have an account\n'
                            '                 try again with - (n) ')
@@ -142,10 +142,24 @@ def show_user_info(username: str, profiles_info: dict):
     print('|Profile info:')
     print('|--------------------------------------------------|')
     for key, value in profiles_info[username].items():
-        print(f'|-{key} - {value}')
+        print(f'| {key} - {value}')
     print('|--------------------------------------------------|')
-    exit()
+    after_login()
 
+
+def after_login():
+    while True:
+        user_input = input('\nIn case you want to add more info about you, enter (i)\n'
+                           'If you want to be returned in the main menu (m)'
+                           'To exit the program input (e): ')
+        if user_input.lower() == 'i':
+            pass
+        elif user_input.lower()== 'm':
+            main()
+        elif user_input.lower() == 'e':
+            exit()
+        else:
+            print('Error: Invalid input')
 
 def main():
 
@@ -159,7 +173,7 @@ def main():
         log_user_in(user_credentials)
 
     else:
-        print(f'\nInvalid answer, please try again...')
+        print(f'\nError: Invalid answer / Please try again...')
         main()
 
 
