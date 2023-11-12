@@ -25,3 +25,5 @@ text = 'hello world'
 print(text.index('o'))
 # check if the string has upper letters
 print(text.isalpha())
+# check if the string is from numbers
+print(text.isnumeric())
