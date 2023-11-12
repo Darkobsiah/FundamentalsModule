@@ -3,12 +3,7 @@ data = 'TeXt'
 print('Lowercase:', data.lower())
 print('Lowercase:', data.casefold())  # just as lower()
 print('Uppercase:', data.upper())
-print()
-
 print('If data is digit:', data.isdigit())
-
-name = 'slavi'
-print(name.capitalize())   # first letter -> upper()
 print()
 
 greeting = ' hello '
@@ -17,6 +12,16 @@ print(greeting.rstrip())  # removes the r space
 print(greeting.strip())   # remove the both spaces
 print()
 
-print(name.startswith('S'))
-print(name.capitalize().startswith('S'))
+
+name = 'slavi'
+print(name.capitalize())   # first letter -> upper()
+print(name.startswith('S'))   # False
+print(name.capitalize().startswith('S'))   # True
 print(name.endswith('i'))
+print()
+
+
+text = 'hello world'
+print(text.index('o'))
+# check if the string has upper letters
+print(text.isalpha())
