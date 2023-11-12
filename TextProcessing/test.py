@@ -1,11 +1,7 @@
-# initialise a string
-a = 'Hello Wold Of Python'
-print(a)
+while True:
+    some_string = input()
 
-#  \t - adding more indentation
-a = 'Hello\t World\t Of\t Python'
-print(a)
-
-# \n - creates new line
-a = '\nHello Wold\nOf Python'
-print(a)
+    if some_string.lower() == 'end':
+        break
+        
+    print(some_string[::-1])
