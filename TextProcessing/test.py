@@ -1,6 +1,5 @@
-while True:
-    text = input()
-    if text == 'end':
-        break
+text = input().split()
 
-    print(f'{text} = {text[::-1]}')
+new_text = [txt * len(txt) for txt in text]
+
+print(''.join(new_text))
