@@ -1,7 +1,7 @@
 while True:
-    some_string = input()
+    text = input()
 
-    if some_string.lower() == 'end':
+    if text == 'end':
         break
-        
-    print(some_string[::-1])
+
+    print(text[::-1])
