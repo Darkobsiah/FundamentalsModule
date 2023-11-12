@@ -1,5 +1,7 @@
-text = input().split()
+lack = input()
+text = input()
 
-new_text = [(txt * len(txt)) + ' ' for txt in text]
+while lack in text:
+    text = text.replace(lack, '')
 
-print(''.join(new_text))
+print(text)
