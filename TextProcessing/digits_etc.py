@@ -1,17 +1,20 @@
+# Read User input
 text = input()
 
-digits = ''
+numbers = ''
 letters = ''
-other = ''
+others = ''
 
-for c in text:
-    if c.isnumeric():
-        digits += c
-    elif c.isalpha():
-        letters += c
+# Initialising a for loop
+for s in text:
+    if s.isnumeric():
+        numbers += s
+    elif s.isalpha():
+        letters += s
     else:
-        other += c
+        others += s
 
-print(digits)
+# Print the symbols to the User
+print(numbers)
 print(letters)
-print(other)
+print(others)
