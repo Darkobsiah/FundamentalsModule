@@ -3,6 +3,7 @@ is being use mainly for explaining
 the functionality of some function.
 """
 
+
 # EXAMPLE
 def string_concatenation(f_str: str,s_str: str) -> str:
     """
@@ -14,5 +15,6 @@ def string_concatenation(f_str: str,s_str: str) -> str:
     """
     final_output = f_str + s_str
     return final_output
+
 
 print(string_concatenation('Stoqn ', 'Manqka'))
