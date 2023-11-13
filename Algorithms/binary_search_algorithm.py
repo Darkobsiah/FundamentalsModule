@@ -2,7 +2,7 @@
 def binary_search(nums, target):
     left = 0
     right = len(nums) - 1
-
+    # initialise a while loop
     while left <= right:
         middle_index = (left + right) // 2
         middle_element = nums[middle_index]
