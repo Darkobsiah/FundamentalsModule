@@ -17,5 +17,6 @@ def binary_search(nums, target):
 
 nums = [int(x) for x in input().split(', ')]
 target = int(input())
+# Print User output
 print(binary_search(nums, target))
 
