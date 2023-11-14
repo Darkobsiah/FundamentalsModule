@@ -45,7 +45,6 @@ else:
 
             if input_letter in current_letters:
                 print("You have already entered this letter")
-                # do something bad
                 continue
 
             if input_letter not in word:
