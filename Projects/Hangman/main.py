@@ -70,12 +70,12 @@ if chosen_word is not None:
                     if chosen_word[i] == input_letter:
                         current_category[i] = input_letter
 
-        if current_category == chosen_word:
+        if ''.join(current_category) == chosen_word:
             is_won = True
             break
 
 if is_won:
-    print(f'Congratulations, you found the chosen_word {chosen_word} successfully!')
+    print(f'Congratulations manqk, you found the chosen word -{chosen_word}, successfully!')
 else:
     print(f'Sorry broski, you could not guess the {category} - {chosen_word}')
 
