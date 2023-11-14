@@ -48,7 +48,6 @@ if chosen_word is not None:
         print(f'Attempts left: {attempts}')
 
         input_letter = input('Write a letter, you know: ')
-
         if len(input_letter) > 1 or not input_letter.isalpha():
             print('\nInput just one letter boy:')
             continue
@@ -59,23 +58,23 @@ if chosen_word is not None:
             attempts -= 1
             continue
 
-        if input_letter not in chosen_word:
+        if input_letter not in chosen_word.lower():
             print('\nIncorrect answer, sorry bruda, attempts -1...\n')
             attempts -= 1
 
         else:
             current_letters.append(input_letter)
-            if input_letter in chosen_word:
+            if input_letter in chosen_word.lower():
                 for i in range(len(chosen_word)):
-                    if chosen_word[i] == input_letter:
+                    if chosen_word.lower()[i] == input_letter:
                         current_category[i] = input_letter
 
-        if ''.join(current_category) == chosen_word:
+        if ''.join(current_category).capitalize() == chosen_word:
             is_won = True
             break
 
 if is_won:
-    print(f'Congratulations manqk, you found the chosen word -{chosen_word}, successfully!')
+    print(f'Congratulations manqk, you found the chosen word - {chosen_word}, successfully!')
 else:
     print(f'Sorry broski, you could not guess the {category} - {chosen_word}')
 
