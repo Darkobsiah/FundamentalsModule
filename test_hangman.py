@@ -1,17 +1,18 @@
 import random
 
+
 def choose_word(category):
-    countries = ["Bulgaria", "France", "Germany", "Italy", "Spain", "Belgium", "Denmark", "Netherlands", "Norway",
+    country = ["Bulgaria", "France", "Germany", "Italy", "Spain", "Belgium", "Denmark", "Netherlands", "Norway",
                  "Poland",
                  "Portugal", "Turkey", "Romania", "Serbia", "Slovakia", "Slovenia", "Moldova", "Russia", "Latvia",
                  "Malta"]
     capitals = ["Sofia", "Paris", "Berlin", "Rome", "Madrid", "Brussels", "Copenhagen", "Amsterdam", "Oslo", "Warsaw",
-               "Lisbon", "Ankara", "Bucharest", "Belgrade", "Bratislava", "Moscow", "Valletta"]
+                "Lisbon", "Ankara", "Bucharest", "Belgrade", "Bratislava", "Moscow", "Valletta"]
     football_clubs = ["CSKA", "PSG", "Bayren", "Inter", "Barcelona", "Gent", "Ajax", "Legia", "Galatasaray", "Porto",
-                     "Partizan", "Spartak", "Real", "Milan", "Juventus", "Liverpool", "Arsenal", "Levski", "Valencia"]
+                      "Partizan", "Spartak", "Real", "Milan", "Juventus", "Liverpool", "Arsenal", "Levski", "Valencia"]
 
     if category == "countries":
-        return random.choice(countries)
+        return random.choice(country)
     elif category == "capital":
         return random.choice(capitals)
     elif category == "football_club":
@@ -33,7 +34,7 @@ else:
         current_letters = []
         attempts = 10
         while attempts > 0:
-            print("Word: "," ".join(current_category))
+            print("Word: ", " ".join(current_category))
             print("Attempting to: ", str(attempts))
 
             input_letter = input("Please enter letter: ").lower()
@@ -44,6 +45,7 @@ else:
 
             if input_letter in current_letters:
                 print("You have already entered this letter")
+                # do something bad
                 continue
 
             if input_letter not in word:
@@ -57,8 +59,10 @@ else:
                             current_category[i] = input_letter
 
             if "".join(current_category) == word:
-                print(f"Congratulations! You have found the {categories}!: {word.title()}")
+                print(f"Congratulations! You have found the {categories}!: {word.capitalize()}")
                 break
 
         if attempts == 0:
             print("You lost the game :(")
+
+
