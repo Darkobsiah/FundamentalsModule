@@ -3,6 +3,7 @@ from cryptography.fernet import Fernet
 user_credentials = {}
 user_profile_info = {}
 
+
 # unused for now
 def encrypt_decrypt_messages(command, username, password, credentials):
     if command == 'encrypt':
