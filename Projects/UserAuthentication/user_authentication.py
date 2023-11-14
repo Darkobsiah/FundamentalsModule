@@ -156,12 +156,10 @@ def show_user_info(username: str, profiles_info: dict):
 
 def after_login():
     while True:
-        user_input = input('\nTo add more info about you, enter (i)\n'
-                           'and Exit the program with (e): ')
-        if user_input.lower() == 'i':
-            pass
-        elif user_input.lower() == 'm':
-            main()
+        user_input = input('Exit the program with (e): '
+                           'or add new user with (r)')
+        if user_input.lower() == 'r':
+            register_user(user_credentials, user_profile_info)
         elif user_input.lower() == 'e':
             exit()
         else:
