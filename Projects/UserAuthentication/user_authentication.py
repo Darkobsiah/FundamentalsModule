@@ -5,28 +5,11 @@ user_profile_info = {}
 
 
 # unused for now
-def encrypt_decrypt_messages(command, username, password, credentials):
-    if command == 'encrypt':
-        key = Fernet.generate_key()
-        variable = Fernet(key)
-
-        # then use the Variable class instance
-        # to encrypt the string string must
-        # be encoded to byte string before encryption
-        enc_message = variable.encrypt(password.encode())
-
-        credentials[username] = {'key': key, 'encMessage': enc_message}
-        print(credentials)
-    else:
-        variable = Fernet(credentials['key'])
-        # decrypt the encrypted string with the
-        # Variable instance of the key,
-        # that was used for encrypting the string
-        # encoded byte string is returned by decrypt method,
-        # so decode it to string with decode methods
-        dec_message = variable.decrypt(password).decode()
-        print(credentials)
-        print("decrypted string: ", dec_message)
+def encrypt_messages(password: str):
+    enc_pass = ''
+    for index in password:
+        enc_pass += chr(ord(index) + 3)
+    return enc_pass
 
 
 def password_validator(user_pass: str):
@@ -89,7 +72,8 @@ def register_user(credentials: dict, user_profile: dict):
             break
         else:
             print(f'\nUnfortunately you failed to repeat your password. Try again with new one!')
-    credentials[name] = {'pass': password1}
+    encrypted_pass = encrypt_messages(password1)
+    credentials[name] = {'pass': encrypted_pass}
     print('\nPassword was saved successfully.')
     add_user_info(name, user_profile)
 
@@ -119,8 +103,8 @@ def log_user_in(credentials: dict):
             password = credentials[username]['pass']
             counter = 3
             while counter > 0:
-                user_input = input('Enter your password: ')
-                if user_input == password:
+                user_pass = input('Enter your password: ')
+                if check_for_user(username, user_pass, credentials, user_profile_info):
                     show_user_info(username, user_profile_info)
                 else:
                     counter -= 1
@@ -136,6 +120,16 @@ def log_user_in(credentials: dict):
                 register_user(credentials, user_profile_info)
             elif answer == 'a':
                 continue
+
+
+def check_for_user(name, password, credentials, user_profiles):
+    while True:
+        encrypted_pass = encrypt_messages(password)
+        if encrypted_pass == credentials[name]['pass']:
+            show_user_info(name, user_profiles)
+        else:
+            print('Wrong password')
+            break
 
 
 def show_user_info(username: str, profiles_info: dict):
@@ -156,8 +150,8 @@ def show_user_info(username: str, profiles_info: dict):
 
 def after_login():
     while True:
-        user_input = input('Exit the program with (e): '
-                           'or add new user with (r)')
+        user_input = input('Exit the program with (e)'
+                           'or add new user with (r): ')
         if user_input.lower() == 'r':
             register_user(user_credentials, user_profile_info)
         elif user_input.lower() == 'e':
