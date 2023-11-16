@@ -180,4 +180,4 @@ if __name__ == '__main__':
     main()
 
 # Allow users to change their passwords.
-
+# Rename the encrypting function to Caesar Cipher
