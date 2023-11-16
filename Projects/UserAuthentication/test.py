@@ -38,27 +38,11 @@ def register_credentials(username, password, credentials):
 
 def check_for_user(name, password, credentials):
     if name in credentials.keys():
-        # encrypt password
-        key = credentials[name]['key']
-        fernet = Fernet(key)
-        decMessage = fernet.decrypt(password).decode()
-        print(decMessage)
-
-        if credentials[name]['encMessage'] == decMessage:
-            print('Allowed access')
+        # hash the pass
+        if password == name['pass']:
+            ... # call the function
         else:
-            print('Incorrect password.')
+            print('Wrong password, try again')
     else:
-        print('There is no user with such a name.')
+        print('There is no such username registered')
 
-
-credentials = {}
-name = 'slavi'
-password = '12345'
-register_credentials(name, password, credentials)
-
-name = 'slavi'
-
-password = '12345'
-
-check_for_user(name, password, credentials)
