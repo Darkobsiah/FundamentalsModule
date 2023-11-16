@@ -5,13 +5,12 @@ def encrypting_algorithm(user_profiles: dict, name: str, password: str):
     '''
     This functions take the password that the user had inputted,
     encrypt the pass and save the data into
-    :return: True
     '''
-    key = random.randint(1, 33)
+    key_random = random.randint(1, 33)
     encrypted_message = ''
     for symbol in password:
-        encrypted_message += chr(ord(symbol) + key)
-    user_profile[name] = {'pass': encrypted_message, 'key': key}
+        encrypted_message += chr(ord(symbol) + key_random)
+    user_profile[name] = {'pass': encrypted_message, 'key': key_random}
     return True
 
 
