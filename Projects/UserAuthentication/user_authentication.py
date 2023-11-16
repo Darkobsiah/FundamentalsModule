@@ -1,10 +1,10 @@
 from cryptography.fernet import Fernet
 
+# Initialise dicts to store the user information
 user_credentials = {}
 user_profile_info = {}
 
 
-# unused for now
 def encrypt_messages(password: str):
     enc_pass = ''
     for index in password:
