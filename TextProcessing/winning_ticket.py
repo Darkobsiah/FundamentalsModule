@@ -22,6 +22,7 @@ for ticket in tickets:
                         if win_ticket in right_part:
                             print(f'ticket "{ticket}" - {len(win_ticket)}{symbol}')
                             is_winning = True
+                counter -= 1
             if is_winning or is_jackpot:
                 break
         else:
