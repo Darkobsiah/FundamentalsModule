@@ -1,6 +1,6 @@
 # Read User input
 tickets = [ticket.strip() for ticket in input().split(', ')]
-valid_symbols = ['@', '#', '$']
+valid_symbols = ['@', '#', '$', '^']
 
 for ticket in tickets:
     is_winning = False
