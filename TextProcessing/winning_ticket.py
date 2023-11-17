@@ -12,9 +12,8 @@ for ticket in tickets:
             counter = 10
             for _ in range(10, 5, -1):
                 win_ticket = symbol * _
-                counter -= 1
-                if win_ticket == left_part:
-                    if win_ticket == right_part:
+                if win_ticket in left_part and counter == 10:
+                    if win_ticket in right_part:
                         print(f'ticket "{ticket}" - {len(win_ticket)}{symbol} Jackpot!')
                         is_jackpot = True
                         break
