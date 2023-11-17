@@ -1,3 +1,5 @@
+from datetime import datetime
+start = datetime.now()
 series = [x for x in input()]
 output_line = ''
 last_symbol = ''
@@ -27,3 +29,5 @@ for character in series:
 # Print User output
 print(f'Unique symbols used: {len(set(output_line))}')
 print(output_line)
+end = datetime.now()
+print(end - start)
