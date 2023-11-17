@@ -1,5 +1,6 @@
 from datetime import datetime
 start = datetime.now()
+
 series = [x for x in input()]
 output_line = ''
 last_symbol = ''
