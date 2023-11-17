@@ -1,20 +1,21 @@
-def check_ticket(ticket):
+# Define the function to check each ticket
+def check_ticket(ticket: str) -> str:
     if len(ticket) != 20:
-        return 'invalid ticket'
-    winning_symbols = ['@', '#', '$', '^']
-    left_part = ticket[:10]
-    right_part = ticket[10:]
-    for match_symbol in winning_symbols:
+        return f'invalid ticket'
+    matching_symbols = ['@', '#', '$', '^']
+    left_side = ticket[:10]
+    right_side = ticket[10:]
+    for match_symbol in matching_symbols:
         for uninterrupted_match_length in range(10, 5, -1):
-            winning_symbol_repetition = match_symbol * uninterrupted_match_length
-            if winning_symbol_repetition in left_part and \
-                    winning_symbol_repetition in right_part:
+            winning_combination = uninterrupted_match_length * match_symbol
+            if winning_combination in left_side and winning_combination in right_side:
                 if uninterrupted_match_length == 10:
                     return f'ticket "{ticket}" - {uninterrupted_match_length}{match_symbol} Jackpot!'
                 return f'ticket "{ticket}" - {uninterrupted_match_length}{match_symbol}'
     return f'ticket "{ticket}" - no match'
 
 
+# Read User input
 tickets = [ticket.strip() for ticket in input().split(', ')]
-for current_ticket in tickets:
-    print(check_ticket(current_ticket))
+for each in tickets:
+    print(check_ticket(each))
