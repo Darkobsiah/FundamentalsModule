@@ -23,13 +23,10 @@ for ticket in tickets:
                         if win_ticket in right_part:
                             print(f'ticket "{ticket}" - {len(win_ticket)}{symbol}')
                             is_winning = True
-        if is_winning or is_jackpot:
-            break
+            if is_winning or is_jackpot:
+                break
         else:
-            print('ticket "{ticket}" - no match')
-    if is_winning:
-        break
+            print(f'ticket "{ticket}" - no match')
     else:
         print('invalid ticket')
 
-# Print User output
