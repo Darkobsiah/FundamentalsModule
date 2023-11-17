@@ -3,12 +3,33 @@ tickets = [ticket.strip() for ticket in input().split(', ')]
 valid_symbols = ['@', '#', '$']
 
 for ticket in tickets:
+    is_winning = False
+    is_jackpot = False
     if len(ticket) == 20:
         left_part = ticket[10:]
         right_part = ticket[:10]
         for symbol in valid_symbols:
-            for _ in range(10 + 1, 6):
-                print(symbol * _)
+            counter = 10
+            for _ in range(10, 5, -1):
+                win_ticket = symbol * _
+                counter -= 1
+                if win_ticket == left_part:
+                    if win_ticket == right_part:
+                        print(f'ticket "{ticket}" - {len(win_ticket)}{symbol} Jackpot!')
+                        is_jackpot = True
+                        break
+                else:
+                    if win_ticket in left_part:
+                        if win_ticket in right_part:
+                            print(f'ticket "{ticket}" - {len(win_ticket)}{symbol}')
+                            is_winning = True
+        if is_winning or is_jackpot:
+            break
+        else:
+            print('ticket "{ticket}" - no match')
+    if is_winning:
+        break
+    else:
+        print('invalid ticket')
 
 # Print User output
-print(tickets)
