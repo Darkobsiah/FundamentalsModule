@@ -10,7 +10,7 @@ def check_ticket(ticket):
             if winning_symbol_repetition in left_part and \
                     winning_symbol_repetition in right_part:
                 if uninterrupted_match_length == 10:
-                    return f'ticket "{ticket} - {uninterrupted_match_length}{match_symbol} Jackpot!'
+                    return f'ticket "{ticket}" - {uninterrupted_match_length}{match_symbol} Jackpot!'
                 return f'ticket "{ticket}" - {uninterrupted_match_length}{match_symbol}'
     return f'ticket "{ticket}" - no match'
 
