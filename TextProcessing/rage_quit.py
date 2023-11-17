@@ -5,7 +5,7 @@ last_symbol = ''
 # Loop through the string
 for character in series:
     # Do not entry non-numeric and symbols who are already in the output
-    if character.isnumeric() or character.upper() in output_line:
+    if character.isnumeric() or character in output_line:
         continue
     current_string = ''
     multiplication_number = 1
