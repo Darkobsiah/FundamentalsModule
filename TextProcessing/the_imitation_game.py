@@ -26,7 +26,8 @@ def insert_index(message: str, index: int, value: str) -> str:
     return ''.join(message_list_of_letters)
 
 
-def change_all()
+def change_all(message: str, old: str, change: str):
+
 
 # COME ON LET'S DO THIS
 encrypted_message = input()
@@ -48,4 +49,5 @@ while True:
     # Change all occurrences of the given substring
     # with the replacement text
     elif 'ChangeAll' in command:
-        pass
+        command, substring, replacement = command.split('|')
+        print(change_all(encrypted_message, substring, replacement))
