@@ -18,8 +18,8 @@ def insert_index(message: str, index_m: int, value_m: str) -> str:
     Initialise a function that Inserts the given value
     before the given index
     :param message: str
-    :param index: int
-    :param value: str
+    :param index_m: int
+    :param value_m: str
     :return: str
     """
     message_list_of_letters = [x for x in message]
