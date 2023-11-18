@@ -1,3 +1,4 @@
+# Define the functions first
 def move_letters(message: str, number: int) -> str:
     """
     Initialise a function that Moves the first n
@@ -39,7 +40,9 @@ def change_all(message: str, old: str, new: str):
     return message
 
 
+# Read User input
 encrypted_message = input()
+# Logic
 while True:
     command = input()
     if command == 'Decode':
@@ -57,5 +60,6 @@ while True:
         command, substring, replacement = command.split('|')
         encrypted_message = change_all(encrypted_message, substring, replacement)
 
+# Print User output
 decrypted_message = encrypted_message
 print(f'The decrypted message is: {decrypted_message}')
