@@ -6,13 +6,13 @@ def move_letters(message: str, number: int) -> str:
     :param number: int
     :return: str
     """
-    substring = message[:number]
+    substring_l = message[:number]
     left_string = message[number:]
-    new_string = left_string + substring
+    new_string = left_string + substring_l
     return new_string
 
 
-def insert_index(message: str, index: int, value: str) -> str:
+def insert_index(message: str, index_m: int, value_m: str) -> str:
     """
     Initialise a function that Inserts the given value
     before the given index
@@ -22,32 +22,40 @@ def insert_index(message: str, index: int, value: str) -> str:
     :return: str
     """
     message_list_of_letters = [x for x in message]
-    message_list_of_letters.insert(index, value)
+    message_list_of_letters.insert(index_m, value_m)
     return ''.join(message_list_of_letters)
 
 
-def change_all(message: str, old: str, change: str):
+def change_all(message: str, old: str, new: str):
+    """
+    Change all occurrences of the given substring
+    # with the replacement text
+    :param message: str
+    :param old: str
+    :param new: str
+    :return: str
+    """
+    message = message.replace(old, new)
+    return message
 
 
-# COME ON LET'S DO THIS
 encrypted_message = input()
 while True:
     command = input()
-    if encrypted_message == 'Decode':
+    if command == 'Decode':
         break
 
-    # Moves the first n letters to the back of the string
     if 'Move' in command:
         number_of_letters = int(command.split('|')[-1])
-        print(move_letters(encrypted_message, number_of_letters))
+        encrypted_message = move_letters(encrypted_message, number_of_letters)
 
-    # Inserts the given value before the given index
     elif 'Insert' in command:
         command, index, value = command.split('|')
-        print(insert_index(encrypted_message, int(index), value))
+        encrypted_message = insert_index(encrypted_message, int(index), value)
 
-    # Change all occurrences of the given substring
-    # with the replacement text
     elif 'ChangeAll' in command:
         command, substring, replacement = command.split('|')
-        print(change_all(encrypted_message, substring, replacement))
+        encrypted_message = change_all(encrypted_message, substring, replacement)
+
+decrypted_message = encrypted_message
+print(f'The decrypted message is: {decrypted_message}')
