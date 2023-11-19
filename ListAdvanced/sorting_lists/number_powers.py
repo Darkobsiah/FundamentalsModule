@@ -1,3 +1,7 @@
-some_list = [2, 3, 4, 5]
+# import pandas as pd
 
-print(list(map(lambda x: pow(x, 2), some_list)))
+# df = pd.DataFrame(
+#     {"name": ["IBRAHIM", "SEGUN", "YUSUF", "DARE", "BOLA", "SOKUNBI"],
+#      "score": [50, 32, 45, 45, 23, 45]
+#     }
+# )
