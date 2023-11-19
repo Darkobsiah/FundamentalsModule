@@ -1,6 +1,6 @@
 import re
 
-text = 'abc def'
+text = 'abc dfb'
 pattern = '.'
 result = re.findall(pattern, text)
 print(result)
