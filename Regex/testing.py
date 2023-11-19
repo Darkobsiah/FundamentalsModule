@@ -1,6 +1,6 @@
 import re
 
-text = 'abc dfb'
-pattern = '.'
+text = 'The cost is 12.99 leva'
+pattern = '\d+\.\d+'
 result = re.findall(pattern, text)
 print(result)
