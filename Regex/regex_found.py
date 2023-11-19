@@ -11,3 +11,6 @@ def regex_func(regex, string):
 
 
 regex_func('\d+', 'Slavcho123')
+regex_func('\D+', 'Slavcho123')
+regex_func('\\bworld\\b', 'hello world')
+regex_func('\D+', 'Slavcho123')
