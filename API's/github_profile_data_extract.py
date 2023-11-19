@@ -35,4 +35,4 @@ def extract_github_info(username):
 
 
 # Replace 'your_github_username' with desired GitHub username
-extract_github_info('slavcho179')
+extract_github_info('zahariev-webbersof')
