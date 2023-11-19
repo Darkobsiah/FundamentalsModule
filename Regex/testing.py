@@ -1,6 +1,6 @@
 import re
 
-text = 'hello, hi, hiii, hiiiii'
-pattern = 'hi'
+text = 'dog, cat, bird, snake'
+pattern = 'dog|cat'
 result = re.findall(pattern, text)
 print(result)
