@@ -1,6 +1,6 @@
 import re
 
-text = 'The cost is 12.99 leva'
+text = 'This is my cost 50.00'
 pattern = '\d+\.\d+'
 result = re.findall(pattern, text)
 print(result)
