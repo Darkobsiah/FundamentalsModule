@@ -1,11 +1,11 @@
 import re
 
-numbers = ''
 regex = r'\d+'
 command = input()
 while command:
     numbers = re.findall(regex, command)
-    for num in numbers:
-        print(int(num), end=' ')
+    if numbers:
+        for num in numbers:
+            print(num,end=' ')
     command = input()
 
