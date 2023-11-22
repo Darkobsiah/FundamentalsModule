@@ -1,19 +1,12 @@
 import re
 
 
-total_sum = 0
-furniture_list = []
-regex = r'>>([A-Za-z]+)<<(\d+\.?\d*)!(\d+)'
-line = input()
-while line != 'Purchase':
-    result = re.search(regex, line)
-    if result:
-        item, price, quantity = result.groups()
-        total_sum += float(price) * int(quantity)
-        furniture_list.append(item)
-    line = input()
+regex = r'((w{3})\.([A-Za-z0-9\-]+)(\.[a-z][\-\.a-z]*))'
+text = input()
+while text:
+    if text:
+        valid_emails = re.search(regex, text)
+        if valid_emails:
+            print(valid_emails.group(0))
 
-print(f'Bought furniture:')
-for furniture in furniture_list:
-    print(furniture)
-print(f'Total money spend: {total_sum:.2f}')
+    text = input()
