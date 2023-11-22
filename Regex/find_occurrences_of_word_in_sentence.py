@@ -3,5 +3,6 @@ import re
 
 line = input()
 word = input()
-result = re.search(fr'+ word +', line)
-print(result)
+pattern = fr"(?i)\b{word}\b"
+result = re.findall(pattern, line)
+print(len(result))
