@@ -1,7 +1,8 @@
 import re
 
 
-regex = r'\b_([A-Za-z0-9]+)\b'
 text = input()
+word = input()
+regex = fr"(?i){word}\b"
 result = re.findall(regex, text)
-print(' '.join(result))
+print(len(result))
