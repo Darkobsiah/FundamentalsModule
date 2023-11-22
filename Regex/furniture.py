@@ -1,8 +1,10 @@
 import re
 
 
+# Initialise lists to store data
 total_cost = []
 furniture_list = []
+# Regular expression
 regex = r">+([A-Za-z]+)<<([0-9]+[\.0-9]*)!([0-9])"
 furniture = input()
 while furniture != 'Purchase':
