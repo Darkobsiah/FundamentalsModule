@@ -1,10 +1,7 @@
 import re
 
 
-regex = '\d+'
+regex = r'\b_([A-Za-z0-9]+)\b'
 text = input()
-while text:
-    match = re.findall(regex, text)
-    if match:
-        print(' '.join(match),end=' ')
-    text = input()
+result = re.findall(regex, text)
+print(' '.join(result))
