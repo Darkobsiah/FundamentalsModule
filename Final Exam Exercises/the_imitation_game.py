@@ -1,16 +1,14 @@
 # Define the functions first
-def move_letters(message: str, number: int) -> str:
+def move_letters(message: str, num_of_letters: int) -> str:
     """
     Initialise a function that Moves the first n
     letters to the back of the string
     :param message: str
-    :param number: int
+    :param num_of_letters: int
     :return: str
     """
-    substring_l = message[:number]
-    left_string = message[number:]
-    new_string = left_string + substring_l
-    return new_string
+    message = message[number_of_letters:] + message[:number_of_letters]
+    return message
 
 
 def insert_index(message: str, index_m: int, value_m: str) -> str:
@@ -40,14 +38,8 @@ def change_all(message: str, old: str, new: str):
     return message
 
 
-# Read User input
-encrypted_message = input()
-# Logic
-while True:
-    command = input()
-    if command == 'Decode':
-        break
-
+def main_func(encmsg: str, commands: list):
+    for command in commands:
     if 'Move' in command:
         number_of_letters = int(command.split('|')[-1])
         encrypted_message = move_letters(encrypted_message, number_of_letters)
@@ -60,6 +52,16 @@ while True:
         command, substring, replacement = command.split('|')
         encrypted_message = change_all(encrypted_message, substring, replacement)
 
-# Print User output
-decrypted_message = encrypted_message
-print(f'The decrypted message is: {decrypted_message}')
+
+# Read User input
+encrypted_message = input()
+command_list = []
+# Logic
+while True:
+    command = input()
+    if command == 'Decode':
+        break
+    command_list.append(command)
+
+# Print Main function output
+print(main_func(encrypted_message, command))
