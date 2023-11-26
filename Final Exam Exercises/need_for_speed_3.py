@@ -13,8 +13,12 @@ def drive_car(vehicle: str, mileage: int, fuel_needed: int, info):
             if car['fuel'] >= fuel_needed:
                 car['fuel'] -= fuel_needed
                 car['distance'] += mileage
+                print(f"{car['name']} driven for {car['distance']} kilometres. {car['fuel']} liters of fuel consumed")
             else:
                 print('Not enough fuel to make that ride')
+        if car['mileage'] >= 10000:
+            info.remove(car)
+
 
 def main_function():
     """"
