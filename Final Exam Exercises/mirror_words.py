@@ -17,9 +17,9 @@ for match in matches:
 
 # Print User output
 if length > 0:
-    print(f"{length} words pairs found!")
+    print(f"{length} word pairs found!")
 else:
-    print("No words pairs found!")
+    print("No word pairs found!")
 if mirror_words:
     print(f'The mirror words are:')
     print(", ".join(mirror_words))
