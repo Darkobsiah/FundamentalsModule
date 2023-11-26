@@ -8,7 +8,7 @@ def print_something(command):
         for item in valid_info:
             food_calories += int(item[3])
         survive_days = food_calories // calories_for_a_day
-        print(f"You have food to last you for: {survive_days}!")
+        print(f"You have food to last you for: {survive_days} days!")
 
     elif command == "item":
         for item in valid_info:
