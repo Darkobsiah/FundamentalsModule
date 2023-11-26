@@ -24,6 +24,7 @@ def show_items_info(info):
         print(f"Item: {item[1]}, Best before: {item[2]}, Nutrition: {item[3]}")
 
 
+# Call the main function
 main_function()
 
 
