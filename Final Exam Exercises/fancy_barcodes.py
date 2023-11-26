@@ -10,13 +10,24 @@ def parse_barcode(bar: str) -> bool:
     result = re.fullmatch(regex, bar)
     if result:
         return True
-    print('Invalid barcode')   # else
     return False
 
 
+# Read User input
 num = int(input())
+# Loop NUM times to save the barcodes into a list
 barcodes = [input() for _ in range(num)]
+# Looping through the list
 for barcode in barcodes:
+    # Parse the barcodes to the func above
     match = parse_barcode(barcode)
+    # If the return of the func == True
     if match:
-        print(barcode)
+        # Get the numbers from the barcode
+        numbers = ''.join(re.findall(r'\d', barcode))
+        # If there are not any
+        if not numbers:
+            numbers = '00'
+        print(f'Product group: {numbers}')
+    else:
+        print('Invalid barcode')
