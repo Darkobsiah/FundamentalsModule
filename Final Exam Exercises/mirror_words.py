@@ -4,7 +4,6 @@ import re
 # Read User input
 text = input()
 regex = r"(@|#)([A-Za-z]{3,})\1{2}([A-Za-z]+)\1"
-
 mirror_words = []
 # Find matches
 matches = re.findall(regex, text)
