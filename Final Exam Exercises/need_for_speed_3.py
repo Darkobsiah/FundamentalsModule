@@ -15,7 +15,21 @@ def main_function():
     when we need them. Okay, lets go!
     """
     num = int(input())
+    car_credentials = []
     for car in range(num):
         car_information = input().split('|')
-        car_model, mileage, fuel_available = car_information[1], int(car_information[2]), int(car_information[3])
-        create_a_car(car_model, mileage, fuel_available)
+        car_model, mileage, fuel_available = car_information[0], int(car_information[1]), int(car_information[2])
+        current_car = create_a_car(car_model, mileage, fuel_available)
+        car_credentials.append(current_car)
+
+    while True:
+        command = input()
+
+        if command == 'Stop':
+            break
+
+        command = command.split(' : ')
+        if command[0] == 'Drive':
+
+
+main_function()
