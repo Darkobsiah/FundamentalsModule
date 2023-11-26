@@ -7,17 +7,25 @@ def create_a_car(name: str, distance: int, fuel: int) -> dict:
     return {'name': name, 'distance': distance, 'fuel': fuel}
 
 
-def drive_car(vehicle: str, mileage: int, fuel_needed: int, info):
-    for car in info:
+def drive_car(vehicle: str, mileage: int, fuel_needed: int, credentials: list):
+    for car in credentials:
         if car['name'] == vehicle:
             if car['fuel'] >= fuel_needed:
                 car['fuel'] -= fuel_needed
                 car['distance'] += mileage
-                print(f"{car['name']} driven for {car['distance']} kilometres. {car['fuel']} liters of fuel consumed")
+                print(f"{car['name']} driven for {mileage} kilometres. {fuel_needed} liters of fuel consumed.")
             else:
                 print('Not enough fuel to make that ride')
-        if car['mileage'] >= 10000:
+        if car['distance'] >= 10000:
             info.remove(car)
+            return info
+
+
+def refuel_tank(model, fuel_to_add):
+    for car in car_credentials:
+        if car['name'] == model:
+            print(car)
+
 
 
 def main_function():
@@ -27,8 +35,8 @@ def main_function():
     We will also call the other additional functions
     when we need them. Okay, lets go!
     """
-    num = int(input())
     car_credentials = []
+    num = int(input())
     for car in range(num):
         car_information = input().split('|')
         car_model, mileage, fuel_available = car_information[0], int(car_information[1]), int(car_information[2])
@@ -45,7 +53,13 @@ def main_function():
         # Drive : Mercedes CLS : 94 : 11
         if command[0] == 'Drive':
             car, distance, fuel = command[1], int(command[2]), int(command[3])
-            drive_car(car, distance, fuel, car_credentials)
+            car_credentials = drive_car(car, distance, fuel, car_credentials)
+
+        elif command[0] == 'Refuel':
+            # "Refuel : {car} : {fuel}":
+            car, fuel = command[1], command[2]
+            print(car_credentials)
+            refuel_tank(car, fuel, car_credentials)
 
 
 main_function()
