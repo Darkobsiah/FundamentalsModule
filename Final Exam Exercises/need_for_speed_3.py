@@ -7,6 +7,15 @@ def create_a_car(name: str, distance: int, fuel: int) -> dict:
     return {'name': name, 'distance': distance, 'fuel': fuel}
 
 
+def drive_car(vehicle: str, mileage: int, fuel_needed: int, info):
+    for car in info:
+        if car['name'] == vehicle:
+            if car['fuel'] >= fuel_needed:
+                car['fuel'] -= fuel_needed
+                car['distance'] += mileage
+            else:
+                print('Not enough fuel to make that ride')
+
 def main_function():
     """"
     This is the main function. Here we will implement
@@ -29,7 +38,10 @@ def main_function():
             break
 
         command = command.split(' : ')
+        # Drive : Mercedes CLS : 94 : 11
         if command[0] == 'Drive':
+            car, distance, fuel = command[1], int(command[2]), int(command[3])
+            drive_car(car, distance, fuel, car_credentials)
 
 
 main_function()
