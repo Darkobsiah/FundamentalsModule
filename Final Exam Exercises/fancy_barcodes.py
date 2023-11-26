@@ -3,10 +3,13 @@ import re
 
 def parse_barcode(bar: str) -> bool:
     """"
-    This function check if a single barcode
+    This function check if a barcode
     is valid or not
+
+    if valid returns: True
+    else: False
     """
-    regex = r'@#+[A-Z][A-Za-z0-9]+[A-Z]@#+'
+    regex = r'@#+[A-Z][A-Za-z0-9]{4,}[A-Z]@#+'
     result = re.fullmatch(regex, bar)
     if result:
         return True
