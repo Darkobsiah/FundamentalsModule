@@ -16,16 +16,15 @@ def drive_car(vehicle: str, mileage: int, fuel_needed: int, credentials: list):
                 print(f"{car['name']} driven for {mileage} kilometres. {fuel_needed} liters of fuel consumed.")
             else:
                 print('Not enough fuel to make that ride')
-        if car['distance'] >= 10000:
-            info.remove(car)
-            return info
+            if car['distance'] >= 100000:
+                credentials.remove(car)
+    return credentials
 
 
-def refuel_tank(model, fuel_to_add):
-    for car in car_credentials:
+def refuel_tank(model, fuel_to_add, credentials: list):
+    for car in credentials:
         if car['name'] == model:
             print(car)
-
 
 
 def main_function():
@@ -58,7 +57,6 @@ def main_function():
         elif command[0] == 'Refuel':
             # "Refuel : {car} : {fuel}":
             car, fuel = command[1], command[2]
-            print(car_credentials)
             refuel_tank(car, fuel, car_credentials)
 
 
