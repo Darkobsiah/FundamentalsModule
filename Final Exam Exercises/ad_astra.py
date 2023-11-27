@@ -6,6 +6,7 @@ def main_function():
     regex = r"(#|\|)([A-Za-z\s]+)\1([0-9]{2}\/[0-9]{2}\/[0-9]{2})\1([0-9]+)\1"
     valid_info = re.findall(regex, food_info)
     calculate_total_calories(valid_info)
+    show_items_info(valid_info)
 
 
 def calculate_total_calories(info):
@@ -16,7 +17,6 @@ def calculate_total_calories(info):
         food_calories += int(item[3])
     survive_days = food_calories // calories_for_a_day
     print(f"You have food to last you for: {survive_days} days!")
-    show_items_info(info)
 
 
 def show_items_info(info):
