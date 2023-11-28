@@ -28,7 +28,7 @@ for emoji in emojis:
     for letter in emoji:
         if letter.isalpha():
             counter += ord(letter)
-    if counter > threshold:
+    if counter >= threshold:
         cool_emojis.append(emoji)
 
 print(f'{len(emojis)} emojis found in the text. The cool ones are:')
