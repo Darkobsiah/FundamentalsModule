@@ -1,6 +1,7 @@
 characters = input().split(', ')
 
-ascii = [ord(x) for x in characters]
+ascii_char_representation = [ord(x) for x in characters]
 
-output_dict = dict(zip(characters, ascii))
-print(output_dict)
+dictionary = dict(zip(characters, ascii_char_representation))
+
+print(dictionary)
