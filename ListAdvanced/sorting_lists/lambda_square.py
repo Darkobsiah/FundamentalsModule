@@ -1,9 +1,8 @@
-def square(x: int) -> int:
-    return x*x
+def ascii_representation(a):
+    return chr(a)
 
 
-numbers = [1, 2, 3, 4, 5]
+some_list = [32, 35, 67, 34, 886]
 
-square_numbers = list(map(square, numbers))
-
-print(square_numbers)
+ascii_nums = list(map(ascii_representation, some_list))
+print(ascii_nums)
