@@ -7,7 +7,7 @@ while not is_obtained:
     for i in range(0, len(text), 2):
         quantity = text[i]
         item = text[i + 1].lower()
-        if item not in storage.keys():
+        if item not in storage:
             storage[item] = 0
         storage[item] += int(quantity)
         if storage["shards"] >= 250:
@@ -25,8 +25,6 @@ while not is_obtained:
         if is_obtained:
             break
 
-print(f'{legendary_item} obtained!')
+print(f"{legendary_item} obtained!")
 for key, value in storage.items():
     print(f"{key}: {value}")
-
-
