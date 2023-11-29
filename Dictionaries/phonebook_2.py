@@ -6,10 +6,10 @@ while True:
         n = int(command)
         break
 
-    name, phone_number = command.split('-')
+    name, number = command.split('-')
     if name not in phonebook:
         phonebook[name] = ''
-    phonebook[name] = phone_number
+    phonebook[name] = number
 
 for search in range(n):
     searched_name = input()
