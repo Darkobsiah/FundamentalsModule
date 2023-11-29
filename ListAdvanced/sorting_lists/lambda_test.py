@@ -1,16 +1,9 @@
-def lowering(string: str)-> str:
-    return string.lower()
+# Lambda for finding power of numbers
+numbers = [1, 2, 3, 4, 5]
+square_numbers = list(map(lambda x: x*x, numbers))
+print(square_numbers)
 
-
-def uppering(string: str)-> str:
-    return string.upper()
-
-
-some_list = ['Pesho', 'GOSHO', 'mitko']
-
-# Lowering function called
-lowered_list = list(map(lowering, some_list))
-print(lowered_list)
-
-upper_list = list(map(uppering, some_list))
-print(upper_list)
+# Lambda for string.lower()
+strings = ['Pesho', 'gosho']
+lower_strings = list(map(lambda x: x.lower(), strings))
+print(lower_strings)
