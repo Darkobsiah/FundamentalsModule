@@ -20,6 +20,7 @@ while command != 'Lumpawaroo':
             if force_user in value:
                 value.remove(force_user)
                 break
+
         if force_side not in force_side_dictionary.keys():
             force_side_dictionary[force_side] = []
         force_side_dictionary[force_side].append(force_user)
