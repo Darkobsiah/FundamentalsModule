@@ -1,12 +1,13 @@
-import re
-
 
 lines = int(input())
 
 stored_info = {}
 for _ in range(lines):
     plant, rarity = input().split('<->')
-    stored_info[plant] = {'rarity': int(rarity), 'rating': []}
+    if plant not in stored_info:
+        stored_info[plant] = {'rarity': 0, 'rating': []}
+    stored_info[plant]['rarity'] = int(rarity)
+
 while True:
     command = input()
     if command == 'Exhibition':
