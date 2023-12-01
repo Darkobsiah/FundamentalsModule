@@ -1,20 +1,36 @@
-def add_function(piece: str, composer: str, key: str, pieces: list):
-    is_there = False
-    for okayde in pieces:
-        for name, value in okayde.items:
-            print(key, value)
+def add_function(piece: str, composer: str, key: str, collection: list):
+    is_added = False
+    for dictionary in collection:
+        if piece in dictionary.values():
+            is_added = True
+            break
 
-    if not is_there:
-        new_piece = {'piece': piece, 'composer': composer, 'key': key}
+    if not is_added:
+        collection.append({'part': piece, 'artist': composer, 'key': key})
         print(f"{piece} by {composer} in {key} added to the collection!")
-        return new_piece
+        return True
     print(f"{piece} is already in the collection!")
-    return False
+    return True
 
 
-def remove_piece(piece: str, pieces: list):
-    if piece in pieces:
-        pieces.remove(piece)
+def remove_piece(piece: str, collection: list):
+    for dictionary in collection:
+        if piece in dictionary.values():
+            collection.remove(dictionary)
+            print(f"Successfully removed {piece}!")
+            return True
+    print(f"Invalid operation! {piece} does not exist in the collection.")
+    return True
+
+
+def change_key(artist: str, new_key: str, collection: list):
+
+    for dictionary in collection:
+        if artist in dictionary.values():
+            dictionary['key'] = new_key
+            print(f"Changed the key of {artist} to {new_key}!")
+            return True
+    print(f"Invalid operation! {artist} does not exist in the collection.")
 
 
 def main_func():
@@ -25,7 +41,7 @@ def main_func():
     for _ in range(num):
         part = input().split('|')
         part, artist, key = part[0], part[1], part[2]
-        piano_pieces.append({'part': part, "artist": artist, "key": key})
+        piano_pieces.append({'part': part, 'artist': artist, 'key': key})
 
     while True:
         command = input()
@@ -37,13 +53,19 @@ def main_func():
         if action == "Add":
             part, artist, key = command[1], command[2], command[3]
             element = add_function(part, artist, key, piano_pieces)
-            if element:
-                piano_pieces.append(element)
 
         elif action == 'Remove':
             part = command[1]
-            remove_piece(part)
+            remove_piece(part, piano_pieces)
+
+        elif action == 'ChangeKey':
+            string, substring = command[1], command[2]
+            change_key(string, substring, piano_pieces)
+
+    for dictionary in piano_pieces:
+        print(f"{dictionary['part']} -> Composer: {dictionary['artist']}, Key: {dictionary['key']}")
 
 
-if __name__ == '__main__':
-    main_func()
+main_func()
+
+
