@@ -1,22 +1,49 @@
 # Read User input
 string = input()
 
+# Logic
 while True:
-    command = input().split()
+    command = input()
     if command == 'Done':
         break
+    command = command.split()
     action = command[0]
 
     if action == 'Change':
-        pass
+        char, replacement = command[1], command[2]
+        if char in string:
+            string = string.replace(char, replacement)
+            print(string)
+
     elif action == 'Includes':
-        pass
+        substring = command[1]
+        if substring in string:
+            print('True')
+        else:
+            print('False')
+
     elif action == 'End':
-        pass
+        substring = command[1]
+        length = len(substring)
+        if string[-length:] == substring:
+            print('True')
+        else:
+            print('False')
+
     elif action == 'Uppercase':
-        pass
+        string = string.upper()
+        print(string)
+
     elif action == 'FindIndex':
-        pass
+        char = command[1]
+        index = string.index(char)
+        print(index)
+
     elif action == 'Cut':
-        pass
+        start_index, count = command[1], command[2]
+        start_index, count = int(start_index), int(count)
+
+        remove = string[start_index:start_index+count]
+        print(remove)
+        string = string[:start_index] + string[start_index+count:]
 
