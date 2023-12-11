@@ -2,8 +2,9 @@
 total_sum = 0
 total_sum_with_taxes = 0
 taxes = 0
-# or while a customer type is inputted
-while True:
+
+# Initialize a while loop
+while True:  # or while a customer type is inputted
     command = input()
     if command == 'special' or command == 'regular':
         break
@@ -15,9 +16,11 @@ while True:
     tax = part_price * 0.2
     taxes += tax
     total_sum_with_taxes += (part_price + tax)
+
 # Make the discount for special customers
 if command == 'special':
     total_sum_with_taxes *= 0.9
+
 # Print User output
 if total_sum == 0:
     print('Invalid order!')

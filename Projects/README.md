@@ -1,3 +1,4 @@
 Hello world is where most of the programmers start. 
 Today I'm introducing my console-games to the world.
-Have a nice play!
+Search for them in the Projects directory. I also have
+many other problem-solutions and exercises above.
