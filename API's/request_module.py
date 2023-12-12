@@ -1,8 +1,8 @@
 import requests
 
-r = requests.get('https://imgs.xkcd.com/comics/python.png')
+payload = {'username': 'Zazi', 'password': 'text'}
+r = requests.post('https://httpbin.org/post', data=payload)
 
-print(r.status_code)
-
-with open ('comic.png', 'wb') as f:
-    f.write(r.content)
+r_dict = r.json()
+for key, value in r_dict.items():
+    print(f'{key} -> {value}')
