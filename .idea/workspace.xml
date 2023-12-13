@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="update git info">
-      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/store_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/testing_modules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/test_version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" afterDir="false" />
+    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="del a file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,7 +424,70 @@
       <option name="project" value="LOCAL" />
       <updated>1702495837974</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="UPLOAD THE FINISHED PROJECT">
+      <created>1702496703226</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496703226</updated>
+    </task>
+    <task id="LOCAL-00039" summary="UPLOAD THE data sources">
+      <created>1702496719238</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496719238</updated>
+    </task>
+    <task id="LOCAL-00040" summary="del a file">
+      <created>1702496732870</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496732870</updated>
+    </task>
+    <task id="LOCAL-00041" summary="upload a git extensional file">
+      <created>1702496751775</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496751775</updated>
+    </task>
+    <task id="LOCAL-00042" summary="upload data source">
+      <created>1702496760824</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496760824</updated>
+    </task>
+    <task id="LOCAL-00043" summary="upload testing file">
+      <created>1702496791795</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496791795</updated>
+    </task>
+    <task id="LOCAL-00044" summary="del a file">
+      <created>1702496812269</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496812269</updated>
+    </task>
+    <task id="LOCAL-00045" summary="del a file">
+      <created>1702496820200</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496820200</updated>
+    </task>
+    <task id="LOCAL-00046" summary="del a file">
+      <created>1702496826547</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1702496826547</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,18 +503,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upload test-file" />
-    <MESSAGE value="delete some files" />
-    <MESSAGE value="upload request module project" />
-    <MESSAGE value="upload slicing play" />
-    <MESSAGE value="upload addition files" />
     <MESSAGE value="upload addition tests" />
     <MESSAGE value="upload project" />
     <MESSAGE value="upload test file" />
     <MESSAGE value="upload eng vocabulary project" />
     <MESSAGE value="upload file texting test" />
     <MESSAGE value="upload texting_files project manager" />
-    <MESSAGE value="upload data source" />
     <MESSAGE value="upload project file" />
     <MESSAGE value="Initialise the main script of the project in new file" />
     <MESSAGE value="upload workspace" />
@@ -468,7 +522,13 @@
     <MESSAGE value="del file" />
     <MESSAGE value="upload project files" />
     <MESSAGE value="update git info" />
-    <option name="LAST_COMMIT_MESSAGE" value="update git info" />
+    <MESSAGE value="UPLOAD THE FINISHED PROJECT" />
+    <MESSAGE value="UPLOAD THE data sources" />
+    <MESSAGE value="upload a git extensional file" />
+    <MESSAGE value="upload data source" />
+    <MESSAGE value="upload testing file" />
+    <MESSAGE value="del a file" />
+    <option name="LAST_COMMIT_MESSAGE" value="del a file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
