@@ -1,6 +1,10 @@
+c = input('replace: ')
+r = input('with: ')
+f = open('sentences.txt', 'r')
+text = f.read()
+text = text.replace(c, r)
+f.close()
 
-file = open('sentences.txt', 'w')
-
-file.write('okay maybe it\'s working, right?')
-
-file.close()
+f = open('sentences.txt', 'w')
+f.write(text)
+f.close()
