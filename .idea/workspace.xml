@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="upload text examples">
-      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/test_version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FundamentalsModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FundamentalsModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API's/request_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/API's/request_module.py" afterDir="false" />
+    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="update git info">
+      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/store_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/testing_modules.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/test_version.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/sentences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,27 +100,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FundamentalsModule" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/UserAuthentication" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/UserAuthentication/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test_version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,20 +121,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testing_modules" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FundamentalsModule" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/EnglishWordsScript" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/EnglishWordsScript/testing_modules.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.new_script" />
       <item itemvalue="Python.old_script" />
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.script_1" />
       <item itemvalue="Python.test_version" />
+      <item itemvalue="Python.testing_modules" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.script_1" />
+        <item itemvalue="Python.testing_modules" />
         <item itemvalue="Python.test_version" />
         <item itemvalue="Python.new_script" />
         <item itemvalue="Python.old_script" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -403,7 +399,35 @@
       <option name="project" value="LOCAL" />
       <updated>1702495399017</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="upload test">
+      <created>1702495763537</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495763537</updated>
+    </task>
+    <task id="LOCAL-00035" summary="del file">
+      <created>1702495799770</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495799770</updated>
+    </task>
+    <task id="LOCAL-00036" summary="upload project files">
+      <created>1702495824265</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495824265</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update git info">
+      <created>1702495837974</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495837974</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -440,7 +464,11 @@
     <MESSAGE value="upload scripts of the project" />
     <MESSAGE value="upload the data of the project" />
     <MESSAGE value="upload text examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload text examples" />
+    <MESSAGE value="upload test" />
+    <MESSAGE value="del file" />
+    <MESSAGE value="upload project files" />
+    <MESSAGE value="update git info" />
+    <option name="LAST_COMMIT_MESSAGE" value="update git info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
