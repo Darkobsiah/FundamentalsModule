@@ -16,8 +16,9 @@ print(alphabet)
 
 
 # Operations with the output
+sentences = []
 letter = 0
-while letter < 26:
+while letter < 2:
     words_startswith = []
     print(f'Current letter: {alphabet[letter]}')
     # Loop through the list
@@ -25,27 +26,24 @@ while letter < 26:
         if word.startswith(alphabet[letter]):  # if match
             print(f'Word or a phrase found: {word}')
 
-            # Write a sentence into the sentences txt
-            file = open('text_data/sentences_list.txt', 'w')
-
+            # Collect sentences into a list
             sentence = input('Show imagination: ')
-            file.write(sentence)
-            file.close()
+            sentences.append(sentence)
+            print('Sentence saved successfully')
 
-            # Remove the word from the words list.txt
+            # Remove the word from the words the data
             f = open('text_data/list_of_words.txt', 'r')
             text = f.read()
             text = text.replace(word, '')
             f.close()
-
             f = open('text_data/list_of_words.txt', 'w')
             f.write(text)
             f.close()
-
-            print('Sentence saved successfully')
             print()
-    # if words_startswith:
-    #     print(f'All the words starting with {alphabet[letter]:}')
-    #     print(f'{", ". join(words_startswith)}')
-    #     print()
+    # Go up to the next letter
     letter += 1
+
+# Save the sentences into the data file
+file = open('text_data/sentences_list.txt', 'w')
+file.write('\n'.join(sentences))
+file.close()
