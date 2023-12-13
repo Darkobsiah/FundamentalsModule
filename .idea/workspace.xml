@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="upload workspace">
+    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="upload text examples">
+      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/test_version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FundamentalsModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FundamentalsModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API's/request_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/API's/request_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/new_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/new_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/list_of_words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/sentences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/EnglishWordsScript/text_data/sentences_list.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -27,11 +34,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.testing">
+  <component name="RunManager" selected="Python.script_1">
     <configuration name="new_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -39,9 +48,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Laptop\AppData\Local\Microsoft\WindowsApps\python3.11.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/new_script.py" />
@@ -74,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="script_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/EnglishWordsScript" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/script.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/EnglishWordsScript/script_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_write" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -103,11 +112,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/UserAuthentication" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/test_write.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/UserAuthentication/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_version" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,11 +133,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/EnglishWordsScript" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/testing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/EnglishWordsScript/test_version.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,13 +146,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.new_script" />
+      <item itemvalue="Python.old_script" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.script_1" />
+      <item itemvalue="Python.test_version" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testing" />
-        <item itemvalue="Python.old_script" />
+        <item itemvalue="Python.script_1" />
+        <item itemvalue="Python.test_version" />
         <item itemvalue="Python.new_script" />
-        <item itemvalue="Python.script" />
-        <item itemvalue="Python.test_write" />
+        <item itemvalue="Python.old_script" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -338,7 +354,56 @@
       <option name="project" value="LOCAL" />
       <updated>1702490546833</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="del">
+      <created>1702491680421</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1702491680421</updated>
+    </task>
+    <task id="LOCAL-00028" summary="upload">
+      <created>1702491824075</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702491824075</updated>
+    </task>
+    <task id="LOCAL-00029" summary="deleted project">
+      <created>1702492543973</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702492543973</updated>
+    </task>
+    <task id="LOCAL-00030" summary="upload scripts of the project">
+      <created>1702495355740</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495355740</updated>
+    </task>
+    <task id="LOCAL-00031" summary="upload the data of the project">
+      <created>1702495369166</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495369166</updated>
+    </task>
+    <task id="LOCAL-00032" summary="upload text examples">
+      <created>1702495392756</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495392756</updated>
+    </task>
+    <task id="LOCAL-00033" summary="upload text examples">
+      <created>1702495399017</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495399017</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -369,7 +434,13 @@
     <MESSAGE value="upload project file" />
     <MESSAGE value="Initialise the main script of the project in new file" />
     <MESSAGE value="upload workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload workspace" />
+    <MESSAGE value="del" />
+    <MESSAGE value="upload" />
+    <MESSAGE value="deleted project" />
+    <MESSAGE value="upload scripts of the project" />
+    <MESSAGE value="upload the data of the project" />
+    <MESSAGE value="upload text examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload text examples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -383,11 +454,6 @@
           <url>file://$PROJECT_DIR$/Projects/WordsStartingLetter/test_write.py</url>
           <line>2</line>
           <option name="timeStamp" value="323" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Projects/WordsStartingLetter/script.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="325" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
