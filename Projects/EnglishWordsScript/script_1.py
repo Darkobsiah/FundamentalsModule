@@ -26,7 +26,7 @@ while letter < 26:
             print(f'Word or a phrase found: {word}')
 
             # Write a sentence into the sentences txt
-            file = open('text_data/sentences_list.py', 'w')
+            file = open('text_data/sentences_list.txt', 'w')
 
             sentence = input('Show imagination: ')
             file.write(sentence)
@@ -37,6 +37,7 @@ while letter < 26:
             text = f.read()
             text = text.replace(word, '')
             f.close()
+
             f = open('text_data/list_of_words.txt', 'w')
             f.write(text)
             f.close()
