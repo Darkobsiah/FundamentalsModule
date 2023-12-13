@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="upload project">
-      <change afterPath="$PROJECT_DIR$/Projects/TextProcessing/text.py" afterDir="false" />
+    <list default="true" id="266cfc51-5d07-4489-ad5f-47ada6dc2c45" name="Changes" comment="upload data source">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API's/request_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/API's/request_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/TextProcessing/user_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/TextProcessing/user_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/replace_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/replace_words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/sentences.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/sentences.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/test_write.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/test_write.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/WordsStartingLetter/words.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/WordsStartingLetter/words.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +35,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.user_project">
-    <configuration name="partition_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.script">
+    <configuration name="replace_words" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,11 +44,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TextProcessing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TextProcessing/partition_method.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/replace_words.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -54,7 +57,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="request_module" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/API's" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API's/request_module.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -75,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="slicing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test_write" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,11 +86,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Slice Notation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/WordsStartingLetter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Slice Notation/slicing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/WordsStartingLetter/test_write.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -96,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="title_method" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="text" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FundamentalsModule" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TextProcessing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Projects/TextProcessing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TextProcessing/title_method.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Projects/TextProcessing/text.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.script" />
+        <item itemvalue="Python.test_write" />
+        <item itemvalue="Python.replace_words" />
         <item itemvalue="Python.user_project" />
-        <item itemvalue="Python.title_method" />
-        <item itemvalue="Python.partition_method" />
-        <item itemvalue="Python.slicing" />
-        <item itemvalue="Python.request_module" />
+        <item itemvalue="Python.text" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +223,77 @@
       <option name="project" value="LOCAL" />
       <updated>1702415305360</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="upload test file">
+      <created>1702415826934</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415826934</updated>
+    </task>
+    <task id="LOCAL-00011" summary="upload workspace">
+      <created>1702415839990</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702415839990</updated>
+    </task>
+    <task id="LOCAL-00012" summary="upload eng vocabulary project">
+      <created>1702483937932</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702483937932</updated>
+    </task>
+    <task id="LOCAL-00013" summary="upload eng vocabulary project">
+      <created>1702484458966</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702484458966</updated>
+    </task>
+    <task id="LOCAL-00014" summary="upload file texting test">
+      <created>1702484960071</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702484960071</updated>
+    </task>
+    <task id="LOCAL-00015" summary="upload file texting test">
+      <created>1702487329608</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702487329608</updated>
+    </task>
+    <task id="LOCAL-00016" summary="upload file texting test">
+      <created>1702487367574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702487367574</updated>
+    </task>
+    <task id="LOCAL-00017" summary="upload texting_files project manager">
+      <created>1702487381970</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702487381970</updated>
+    </task>
+    <task id="LOCAL-00018" summary="upload texting_files project manager">
+      <created>1702487945630</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702487945630</updated>
+    </task>
+    <task id="LOCAL-00019" summary="upload data source">
+      <created>1702487973088</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1702487973089</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +316,13 @@
     <MESSAGE value="upload addition files" />
     <MESSAGE value="upload addition tests" />
     <MESSAGE value="upload project" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload project" />
+    <MESSAGE value="upload test file" />
+    <MESSAGE value="upload workspace" />
+    <MESSAGE value="upload eng vocabulary project" />
+    <MESSAGE value="upload file texting test" />
+    <MESSAGE value="upload texting_files project manager" />
+    <MESSAGE value="upload data source" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload data source" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -252,6 +331,11 @@
           <url>file://$PROJECT_DIR$/API's/request_module.py</url>
           <line>1</line>
           <option name="timeStamp" value="319" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Projects/WordsStartingLetter/script.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="322" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
