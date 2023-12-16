@@ -14,7 +14,7 @@ def add_contact():
 def show_contacts():
     print('\nList of your contacts:')
     if not address_book:
-        print('Empty...')
+        print('The list of your contact is empty...')
     else:
         for name, details in address_book.items():
             print(f"Name: {name}")
@@ -44,25 +44,28 @@ def show_contacts():
 
 
 def search_contacts():
-    while True:
-        contact = input('\nPlease enter the name of the contact you are searching for here: ')
-        if contact in address_book:
-            print(f'\nContact found.\nInfo:')
-            print(f"Phone - {address_book[contact]['Phone']}\nAddress - {address_book[contact]['Address']}")
-        else:
-            print('\nThis contact does not exist')
-        answer = input(f'\nIf you want to search again choose (a)\n'
-                       f'and to go back to Main Menu choose (m): ')
+    if not address_book:
+        print('Empty...')
+    else:
         while True:
-            answer = answer.lower()
-            if answer == 'm':
-                return True
-            elif answer == 'a':
-                break
+            contact = input('\nPlease enter the name of the contact you are searching for here: ')
+            if contact in address_book:
+                print(f'\nContact found.\nInfo:')
+                print(f"Phone - {address_book[contact]['Phone']}\nAddress - {address_book[contact]['Address']}")
             else:
-                answer = input('\nYour answer is invalid, please choose between\n'
-                               '(a) for another try,\n'
-                               '(m) to return back to Main Menu.')
+                print('\nThis contact does not exist')
+            answer = input(f'\nIf you want to search again choose (a)\n'
+                           f'and to go back to Main Menu choose (m): ')
+            while True:
+                answer = answer.lower()
+                if answer == 'm':
+                    return True
+                elif answer == 'a':
+                    break
+                else:
+                    answer = input('\nYour answer is invalid, please choose between\n'
+                                   '(a) for another try,\n'
+                                   '(m) to return back to Main Menu.')
 
 
 def delete_contact():
