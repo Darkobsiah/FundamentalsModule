@@ -1,3 +1,4 @@
-add = lambda x, y: x + y
+names = ['John', 'Den','Mark', 'Jane']
 
-print(add(2, 2))
+print(sorted(names, key = lambda name: name.split()[-1]))
+
